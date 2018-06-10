@@ -22,5 +22,7 @@
 
 
 <style scoped lang="stylus">
+  @import '../assets/styles/_vars'
+  @import '../assets/styles/_mixins'
 
 </style>
