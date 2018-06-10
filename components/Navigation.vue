@@ -62,6 +62,8 @@
 </script>
 
 <style scoped lang="stylus">
+  @import '../assets/styles/_vars'
+
   nav
     display flex
     justify-content space-between
@@ -72,16 +74,16 @@
     a
       padding 5px
       display inline-block
-      color: #216794
+      color: $darkblue
   li
     border-radius 20px
     a
       padding: 6px 20px
   li.cta
-    background #1B80FE
+    background $blue
     a
-      color #fff
+      color $white
   li.active
     a
-      color #5CD5C6
+      color $turquoise
 </style>

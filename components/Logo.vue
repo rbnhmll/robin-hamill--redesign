@@ -1,5 +1,7 @@
 <template>
-  <h1>🚀 Robin Hamill</h1>
+  <h1>
+    <a href="/">🚀 robin hamill.</a>
+  </h1>
 </template>
 
 <script>

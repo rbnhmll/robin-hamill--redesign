@@ -2,8 +2,10 @@
   <footer>
     <div class="wrapper">
       <Navigation />
-      <p>&copy; Robin Hamill {{ year }}</p>
-      <SocialIcons />
+      <div class="footer__bottom">
+        <p>&copy; Robin Hamill {{ year }}</p>
+        <SocialIcons />
+      </div>
     </div>
   </footer>
 </template>
@@ -28,5 +30,12 @@
 
 
 <style scoped lang="stylus">
+  @import '../assets/styles/_vars'
 
+  footer
+    background $lightgrey
+    padding 70px 0
+  .footer__bottom
+    display flex
+    justify-content space-between
 </style>

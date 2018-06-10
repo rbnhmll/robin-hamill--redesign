@@ -24,14 +24,16 @@
 </script>
 
 <style scoped lang="stylus">
+  @import '../assets/styles/_vars'
+
   section
-    background #2D87F7
+    background $blue
     border-radius 150px 0 150px 0
   .wrapper
     padding 100px 0
     display flex
     justify-content space-between
   h4
-    color #fff
+    color $white
 
 </style>
