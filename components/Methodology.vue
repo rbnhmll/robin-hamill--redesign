@@ -21,9 +21,9 @@
 </template>
 
 <script>
-  export default {
-    name: 'Methodology'
-  }
+export default {
+  name: "Methodology"
+};
 </script>
 
 <style scoped lang="stylus">

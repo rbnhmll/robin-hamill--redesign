@@ -6,9 +6,9 @@
 </template>
 
 <script>
-  export default {
-    name: 'HeaderHero'
-  }
+export default {
+  name: "HeaderHero"
+};
 </script>
 
 <style scoped lang="stylus">

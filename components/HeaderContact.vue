@@ -7,14 +7,14 @@
 </template>
 
 <script>
-  import SocialIcons from './SocialIcons'
+import SocialIcons from "./SocialIcons";
 
-  export default {
-    name: 'HeaderAbout',
-    components: {
-      SocialIcons
-    }
+export default {
+  name: "HeaderAbout",
+  components: {
+    SocialIcons
   }
+};
 </script>
 
 <style scoped lang="stylus">

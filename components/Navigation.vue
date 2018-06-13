@@ -13,42 +13,42 @@
 </template>
 
 <script>
-  import Logo from './Logo'
+import Logo from "./Logo";
 
-  export default {
-    name: "navigation",
-    props: ['tone'],
-    components: {
-      Logo
-    },
-    data() {
-      return {
-        pages: [
-          {
-            name: 'Home',
-            url: '/'
-          },
-          {
-            name: 'Projects',
-            url: '/projects'
-          },
-          {
-            name: 'Personal Projects',
-            url: '/personal'
-          },
-          {
-            name: 'About',
-            url: '/about'
-          },
-          {
-            name: 'Contact',
-            url: '/contact',
-            class: 'cta'
-          },
-        ]
-      }
-    }
+export default {
+  name: "navigation",
+  props: ["tone"],
+  components: {
+    Logo
+  },
+  data() {
+    return {
+      pages: [
+        {
+          name: "Home",
+          url: "/"
+        },
+        {
+          name: "Projects",
+          url: "/projects"
+        },
+        {
+          name: "Personal Projects",
+          url: "/personal"
+        },
+        {
+          name: "About",
+          url: "/about"
+        },
+        {
+          name: "Contact",
+          url: "/contact",
+          class: "cta"
+        }
+      ]
+    };
   }
+};
 </script>
 
 <style scoped lang="stylus">

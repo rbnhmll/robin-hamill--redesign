@@ -2,25 +2,25 @@
   <section class="cta-banner">
     <div class="wrapper">
       <h4>Let's chat about bringing your business to life.</h4>
-      <ButtonLink
+      <cta-button
         url="/contact"
         size="large"
       >
         Get in touch!
-      </ButtonLink>
+      </cta-button>
     </div>
   </section>
 </template>
 
 <script>
-  import ButtonLink from './ButtonLink'
+import CtaButton from "./CtaButton";
 
-  export default {
-    name: 'CTABanner',
-    components: {
-      ButtonLink
-    }
+export default {
+  name: "CTABanner",
+  components: {
+    CtaButton
   }
+};
 </script>
 
 <style scoped lang="stylus">

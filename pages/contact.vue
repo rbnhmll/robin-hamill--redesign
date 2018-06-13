@@ -9,24 +9,23 @@
 </template>
 
 <script>
-  import Vheader from '../components/VHeader'
-  import HeaderContact from '../components/HeaderContact'
-  import ContactForm from '../components/ContactForm';
-  import CurrentProjects from '../components/CurrentProjects';
+import Vheader from "~/components/VHeader";
+import HeaderContact from "~/components/HeaderContact";
+import ContactForm from "~/components/ContactForm";
+import CurrentProjects from "~/components/CurrentProjects";
 
-  export default {
-    name: 'Contact',
-    components: {
-      Vheader,
-      HeaderContact,
-      ContactForm,
-      CurrentProjects
-    }
+export default {
+  name: "Contact",
+  components: {
+    Vheader,
+    HeaderContact,
+    ContactForm,
+    CurrentProjects
   }
+};
 </script>
 
 <style scoped lang="stylus">
-  @import '../assets/styles/_vars'
-  @import '../assets/styles/_mixins'
-
+@import '../assets/styles/_vars'
+@import '../assets/styles/_mixins'
 </style>

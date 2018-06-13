@@ -6,18 +6,17 @@
 </template>
 
 <script>
-  export default {
-    name: '_project',
-    data() {
-      return {
-        params: this.$route.params
-      }
-    }
+export default {
+  name: "_project",
+  data() {
+    return {
+      params: this.$route.params
+    };
   }
+};
 </script>
 
 <style scoped lang="stylus">
-  @import '../../assets/styles/_vars'
-  @import '../../assets/styles/_mixins'
-
+@import '../../assets/styles/_vars'
+@import '../../assets/styles/_mixins'
 </style>

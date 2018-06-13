@@ -45,9 +45,9 @@
 </template>
 
 <script>
-  export default {
-    name: 'ContactForm'
-  }
+export default {
+  name: "ContactForm"
+};
 </script>
 
 <style scoped lang="stylus">

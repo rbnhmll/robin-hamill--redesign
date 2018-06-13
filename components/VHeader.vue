@@ -1,21 +1,21 @@
 <template>
   <header class="v-header">
     <div class="wrapper">
-      <Navigation/>
+      <navigation/>
       <slot></slot>
     </div>
   </header>
 </template>
 
 <script>
-  import Navigation from './Navigation.vue'
+import Navigation from "./Navigation.vue";
 
-  export default {
-    name: 'VHeader',
-    components: {
-      Navigation
-    }
+export default {
+  name: "VHeader",
+  components: {
+    Navigation
   }
+};
 </script>
 
 
