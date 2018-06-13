@@ -30,13 +30,14 @@
 
 
 <style scoped lang="stylus">
-  @import '../assets/styles/_vars'
-  @import '../assets/styles/_mixins'
+@import '../assets/styles/_vars'
+@import '../assets/styles/_mixins'
 
-  footer
-    background $lightgrey
-    padding 70px 0
-  .footer__bottom
-    display flex
-    justify-content space-between
+footer
+  background $lightgrey
+  padding 70px 0
+
+.footer__bottom
+  display flex
+  justify-content space-between
 </style>

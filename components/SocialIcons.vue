@@ -31,10 +31,10 @@
 </script>
 
 <style scoped lang="stylus">
-  @import '../assets/styles/_vars'
-  @import '../assets/styles/_mixins'
+@import '../assets/styles/_vars'
+@import '../assets/styles/_mixins'
 
-  ul
-    display flex
-    list-style none
+ul
+  display flex
+  list-style none
 </style>

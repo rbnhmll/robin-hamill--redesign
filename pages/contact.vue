@@ -1,17 +1,26 @@
 <template>
-  <main>
-    <h1>Contact</h1>
+  <div>
+    <Vheader>
+      <HeaderContact />
+    </Vheader>
     <ContactForm />
-  </main>
+    <CurrentProjects />
+  </div>
 </template>
 
 <script>
+  import Vheader from '../components/VHeader'
+  import HeaderContact from '../components/HeaderContact'
   import ContactForm from '../components/ContactForm';
+  import CurrentProjects from '../components/CurrentProjects';
 
   export default {
     name: 'Contact',
     components: {
-      ContactForm
+      Vheader,
+      HeaderContact,
+      ContactForm,
+      CurrentProjects
     }
   }
 </script>

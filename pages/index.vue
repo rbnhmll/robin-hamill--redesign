@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h1>Index</h1>
+    <Vheader>
+      <HeaderHero />
+    </Vheader>
     <Methodology />
     <CurrentProjects />
     <CTABanner />
@@ -8,12 +10,16 @@
 </template>
 
 <script>
+  import Vheader from '../components/VHeader.vue'
+  import HeaderHero from '../components/HeaderHero.vue'
   import CTABanner from '../components/CTABanner';
   import CurrentProjects from '../components/CurrentProjects';
   import Methodology from '../components/Methodology';
 
   export default {
     components: {
+      Vheader,
+      HeaderHero,
       CTABanner,
       CurrentProjects,
       Methodology

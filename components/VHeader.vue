@@ -2,27 +2,24 @@
   <header class="v-header">
     <div class="wrapper">
       <Navigation/>
-      <HeaderHero />
+      <slot></slot>
     </div>
   </header>
 </template>
 
 <script>
   import Navigation from './Navigation.vue'
-  import HeaderHero from './HeaderHero.vue'
 
   export default {
     name: 'VHeader',
     components: {
-      Navigation,
-      HeaderHero
+      Navigation
     }
   }
 </script>
 
 
 <style scoped lang="stylus">
-  @import '../assets/styles/_vars'
-  @import '../assets/styles/_mixins'
-
+@import '../assets/styles/_vars'
+@import '../assets/styles/_mixins'
 </style>

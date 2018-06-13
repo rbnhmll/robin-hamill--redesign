@@ -1,6 +1,6 @@
 <template>
   <h1>
-    <a href="/">🚀 robin hamill.</a>
+    <nuxt-link to="/">🚀 robin hamill.</nuxt-link>
   </h1>
 </template>
 
@@ -11,7 +11,6 @@
 </script>
 
 <style scoped lang="stylus">
-  @import '../assets/styles/_vars'
-  @import '../assets/styles/_mixins'
-
+@import '../assets/styles/_vars'
+@import '../assets/styles/_mixins'
 </style>

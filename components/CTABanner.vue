@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="cta-banner">
     <div class="wrapper">
       <h4>Let's chat about bringing your business to life.</h4>
       <ButtonLink
@@ -24,17 +24,18 @@
 </script>
 
 <style scoped lang="stylus">
-  @import '../assets/styles/_vars'
-  @import '../assets/styles/_mixins'
+@import '../assets/styles/_vars'
+@import '../assets/styles/_mixins'
 
-  section
-    background $blue
-    border-radius 150px 0 150px 0
-  .wrapper
-    padding 100px 0
-    display flex
-    justify-content space-between
-  h4
-    color $white
+section
+  background $blue
+  border-radius 150px 0 150px 0
 
+.wrapper
+  padding 100px 0
+  display flex
+  justify-content space-between
+
+h4
+  color $white
 </style>

@@ -3,12 +3,10 @@
     <logo />
     <ul>
       <li
-        :class="page.class"
         v-for="page in pages"
         :key="page.name"
-        v-isCurrentPage="page.url"
       >
-        <a :href="page.url">{{ page.name }}</a>
+        <nuxt-link :to="page.url" :class="page.class">{{ page.name }}</nuxt-link>
       </li>
     </ul>
   </nav>
@@ -19,6 +17,7 @@
 
   export default {
     name: "navigation",
+    props: ['tone'],
     components: {
       Logo
     },
@@ -48,43 +47,39 @@
           },
         ]
       }
-    },
-    directives: {
-      isCurrentPage: {
-        bind: function (el, binding, vnode) {
-          if (binding.value === window.location.pathname) {
-            el.classList.add('active')
-          }
-        }
-      }
     }
   }
 </script>
 
 <style scoped lang="stylus">
-  @import '../assets/styles/_vars'
-  @import '../assets/styles/_mixins'
+@import '../assets/styles/_vars'
+@import '../assets/styles/_mixins'
 
-  nav
-    display flex
-    justify-content space-between
-    align-items center
-  ul
-    display flex
-    list-style none
-    a
-      padding 5px
-      display inline-block
-      color: $darkblue
-  li
+nav
+  display flex
+  justify-content space-between
+  align-items center
+
+ul
+  display flex
+  list-style none
+
+  a
+    padding 5px
+    display inline-block
+    color $darkblue
+
+li
+  flex-shrink 0
+
+  a
     border-radius 20px
-    a
-      padding: 6px 20px
-  li.cta
-    background $blue
-    a
-      color $white
-  li.active
-    a
-      color $turquoise
+    padding 6px 20px
+
+a.cta
+  background $blue
+  color $white
+
+a.nuxt-link-exact-active
+  color $turquoise
 </style>

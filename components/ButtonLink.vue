@@ -20,11 +20,11 @@
 </script>
 
 <style scoped lang="stylus">
-  @import '../assets/styles/_vars'
-  @import '../assets/styles/_mixins'
+@import '../assets/styles/_vars'
+@import '../assets/styles/_mixins'
 
-  a
-    text-decoration none
-    padding 1.5em 4em
-    border-radius 50px
+a
+  text-decoration none
+  padding 1.5em 4em
+  border-radius 50px
 </style>
