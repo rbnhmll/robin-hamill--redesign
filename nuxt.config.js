@@ -1,5 +1,5 @@
 require("dotenv").config();
-import client from "~/plugins/contentful";
+const client = require("./plugins/contentful");
 
 module.exports = {
   /*
@@ -47,7 +47,7 @@ module.exports = {
   modules: ["@nuxtjs/dotenv"],
   generate: {
     routes() {
-      return clientInformation
+      return client
         .getEntries({
           content_type: "projects"
         })
