@@ -4,7 +4,6 @@
       <h4>Let's chat about bringing your business to life.</h4>
       <cta-button
         url="/contact"
-        size="large"
       >
         Get in touch!
       </cta-button>
@@ -16,7 +15,7 @@
 import CtaButton from "./CtaButton";
 
 export default {
-  name: "CTABanner",
+  name: "CtaBanner",
   components: {
     CtaButton
   }

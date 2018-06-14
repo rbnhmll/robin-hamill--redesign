@@ -18,6 +18,9 @@ export default {
     VHeader,
     HeaderAbout,
     CtaBanner
+  },
+  head: {
+    title: `Robin Hamill • About`
   }
 };
 </script>

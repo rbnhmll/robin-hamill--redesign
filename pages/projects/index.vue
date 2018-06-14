@@ -1,11 +1,7 @@
 <template>
   <div>
     <Vheader></Vheader>
-    <h1>Projects Index</h1>
-    <strong>Projects: </strong>
-    <ul>
-      <li v-for="proj in projects" :key="proj.sys.id">{{ proj.fields.title }}</li>
-    </ul>
+    <project-loop :projects="projects" />
   </div>
 </template>
 
@@ -13,13 +9,18 @@
 import client from "~/plugins/contentful";
 
 import Vheader from "~/components/VHeader.vue";
+import ProjectLoop from "~/components/ProjectLoop.vue";
 
 export default {
   name: "ProjectsIndex",
+  components: {
+    Vheader,
+    ProjectLoop
+  },
   asyncData() {
     return client
       .getEntries({
-        content_type: "project"
+        content_type: "projects"
       })
       .then(entry => {
         return {
@@ -28,8 +29,8 @@ export default {
       })
       .catch(err => console.log(err));
   },
-  components: {
-    Vheader
+  head: {
+    title: `Robin Hamill • Projects`
   }
 };
 </script>

@@ -2,18 +2,31 @@
   <li>
     <h2>{{ proj.fields.title }}</h2>
     <p>{{ proj.fields.description }}</p>
-    <ViewLiveButton :url="proj.fields.url">
+    <view-live-button
+      :url="proj.fields.url"
+    >
       View Live
-    </ViewLiveButton>
+    </view-live-button>
+    <case-study-button
+      :url="proj.fields.slug | sub('/projects/')"
+      v-if="proj.fields.hasCaseStudy"
+    >
+      View Case Study
+    </case-study-button>
   </li>
 </template>
 
 <script>
-import ViewLiveButton from "./ViewLiveButton.vue";
+import ViewLiveButton from "~/components/ViewLiveButton";
+import CaseStudyButton from "~/components/CaseStudyButton";
 
 export default {
   name: "ProjectItem",
-  props: ["proj"]
+  props: ["proj"],
+  components: {
+    ViewLiveButton,
+    CaseStudyButton
+  }
 };
 </script>
 

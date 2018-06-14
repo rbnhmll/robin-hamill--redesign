@@ -5,14 +5,14 @@
     </Vheader>
     <Methodology />
     <CurrentProjects />
-    <CTABanner />
+    <cta-banner />
   </div>
 </template>
 
 <script>
 import Vheader from "~/components/VHeader.vue";
 import HeaderHero from "~/components/HeaderHero.vue";
-import CTABanner from "~/components/CTABanner";
+import CtaBanner from "~/components/CtaBanner";
 import CurrentProjects from "~/components/CurrentProjects";
 import Methodology from "~/components/Methodology";
 
@@ -20,7 +20,7 @@ export default {
   components: {
     Vheader,
     HeaderHero,
-    CTABanner,
+    CtaBanner,
     CurrentProjects,
     Methodology
   }

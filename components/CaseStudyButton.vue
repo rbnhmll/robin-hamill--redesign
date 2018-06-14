@@ -1,12 +1,12 @@
 <template>
-  <a :href="url" target="_blank">
+  <nuxt-link :to="url">
     <slot></slot>
-  </a>
+  </nuxt-link>
 </template>
 
 <script>
 export default {
-  name: "ViewLiveButton",
+  name: "CaseStudyButton",
   props: ["url"],
   data() {
     return {};
@@ -26,5 +26,5 @@ a
   padding 10px
   border-radius 50px
   color $white
-  background $darkblue
+  background $blue
 </style>

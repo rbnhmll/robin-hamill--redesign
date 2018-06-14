@@ -21,6 +21,9 @@ export default {
     HeaderContact,
     ContactForm,
     CurrentProjects
+  },
+  head: {
+    title: `Robin Hamill • Contact`
   }
 };
 </script>

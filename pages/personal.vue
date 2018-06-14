@@ -1,30 +1,20 @@
 <template>
   <div>
     <Vheader />
-    <section class="wrapper">
-      <strong>Personal Projects: </strong>
-      <ul>
-        <project-item
-          v-for="proj in projects"
-          :proj="proj"
-          :key="proj.sys.id"
-        />
-      </ul>
-    </section>
+    <project-loop :projects="projects" />
   </div>
 </template>
 
 <script>
 import client from "~/plugins/contentful";
-
-import Vheader from "../components/VHeader.vue";
-import ProjectItem from "../components/ProjectItem.vue";
+import Vheader from "~/components/VHeader.vue";
+import ProjectLoop from "~/components/ProjectLoop.vue";
 
 export default {
   name: "Personal",
   components: {
     Vheader,
-    ProjectItem
+    ProjectLoop
   },
   asyncData() {
     return client
@@ -37,6 +27,9 @@ export default {
         };
       })
       .catch(err => console.log(err));
+  },
+  head: {
+    title: `Robin Hamill • Personal Projects`
   }
 };
 </script>
