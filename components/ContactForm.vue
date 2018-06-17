@@ -7,14 +7,14 @@
           <label for="firstName">First Name</label>
           <input type="text" id="firstName" name="First Name">
         </div>        
-        <div class="form-group form-group--company-name">
-          <label for="companyName">Company Name</label>
-          <input type="text" id="companyName" name="Company Name">
-        </div>        
         <div class="form-group form-group--last-name">
           <label for="lastName">Last Name</label>
           <input type="text" id="lastName" name="Last Name">
         </div>
+        <div class="form-group form-group--company-name">
+          <label for="companyName">Company Name</label>
+          <input type="text" id="companyName" name="Company Name">
+        </div>        
         <div class="form-group form-group--email">
           <label for="email">Enter Your Email</label>
           <input type="email" id="email" name="Email">
