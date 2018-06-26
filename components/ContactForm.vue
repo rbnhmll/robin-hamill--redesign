@@ -1,8 +1,8 @@
 <template>
   <div class="wrapper">
     <form name="contact_form" method="POST" netlify>
-      <fieldset class="about">
-        <legend>About You</legend>
+      <h3>About You</h3>
+      <section class="about">
         <div class="form-group form-group--first-name">
           <label for="firstName">First Name</label>
           <input type="text" id="firstName" name="First Name">
@@ -27,10 +27,10 @@
           <label for="description">Describe Your Project</label>
           <textarea name="Description" id="description"></textarea>
         </div>
-      </fieldset>
+      </section>
       
-      <fieldset class="services">
-        <legend>Services Needed</legend>
+      <h3>Services Needed</h3>
+      <section class="services">
         
         <input type="radio" name="Service" id="ecommerce" value="ecommerce">
         <label for="ecommerce">e-commerce</label>
@@ -43,24 +43,24 @@
         
         <label for="other">Other: </label>
         <input type="text" id="other" name="Service--other">
-      </fieldset>
+      </section>
 
-      <fieldset class="timeline">
-        <legend>Timeline</legend>
+      <h3>Timeline</h3>
+      <section class="timeline">
 
         <label class="visuallyhidden" for="timeline">Timeline</label>
         <input type="range" name="timeline" id="timeline">
-      </fieldset>
+      </section>
 
-      <fieldset class="budget">
-        <legend>Budget</legend>
+      <h3>Budget</h3>
+      <section class="budget">
 
         <label class="visuallyhidden" for="budget">Budget</label>
         <input type="range" name="budget" id="budget">
-      </fieldset>
-      <fieldset class="submit">
+      </section>
+      <section class="submit">
         <submit-button value="Send Message" />
-      </fieldset>
+      </section>
     </form>
   </div>
 </template>
@@ -81,42 +81,54 @@ export default {
 @import '../assets/styles/_mixins'
 
 form
-  border 1px solid #bada55
   display grid
   grid-template-columns 1fr 1fr
   grid-auto-rows auto
+  grid-gap 40px
+
+  h3
+    color $darkblue
+
+.form-group
+  position relative
+
+  label
+    position absolute
+    top 10px
+    left 10px
+    line-height 1
+    font-size 1.2rem
+    color #D2D2D2
+
+  input, textarea
+    width 100%
+    border 1px solid $darkblue
+    border-radius 5px
+    padding 10px
 
 .about
   grid-column 1 / -1
   display grid
-  grid-template-columns 3fr 3fr 1fr 3fr 3fr
-  grid-template-areas 'first-name last-name . company-name company-name'
+  grid-template-columns 1fr 1fr 80px 1fr 1fr
+  grid-gap 15px 10px
 
-  .form-group--first-name
-    grid-area first-name
+.form-group--first-name
+  grid-column 1 / span 1
 
-  .form-group--last-name
-    grid-area last-name
+.form-group--last-name
+  grid-column 2 / span 1
 
-  .form-group--first-name
-    grid-area company-name
+.form-group--email
+  grid-column 1 / span 2
 
-.services
+.form-group--company-name, .form-group--tel
+  grid-column 4 / span 2
+
+.form-group--description
   grid-column 1 / -1
 
-.timeline
-  grid-column 1 / 2
-
-.budget
-  grid-column 2 / -1
-
-.submit
-  grid-column 1 / -1
-  text-align center
-
-fieldset
-  // border none
-
-legend
-  color $darkblue
+textarea
+  min-height 185px
+  max-width 100%
+  resize none
 </style>
