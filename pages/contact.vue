@@ -31,4 +31,13 @@ export default {
 <style scoped lang="stylus">
 @import '../assets/styles/_vars'
 @import '../assets/styles/_mixins'
+
+header
+  // background-image url('~/assets/images/contactHeaderBackground.svg')
+  // background-size contain
+  background $blue
+
+  nav
+    a
+      color $white
 </style>
