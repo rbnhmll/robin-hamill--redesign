@@ -20,8 +20,11 @@ export default {
 
 a
   text-decoration none
-  padding 1.5em 4em
+  padding 1.8rem
   border-radius 50px
-  background #fff
-  color #3A8DF1
+  background $white
+  color $blue
+  text-align center
+  font-size 2.4rem
+  font-weight bold
 </style>
