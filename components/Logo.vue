@@ -16,6 +16,12 @@ export default {
 @import '../assets/styles/_vars'
 @import '../assets/styles/_mixins'
 
+h1
+  margin 0
+
+a
+  display block
+
 img
   max-height 35px
   display block

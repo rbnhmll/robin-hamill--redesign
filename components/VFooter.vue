@@ -35,7 +35,6 @@ export default {
 
 footer
   background $lightgrey
-  padding 70px 0
 
 .footer__bottom
   display flex

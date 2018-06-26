@@ -28,8 +28,8 @@ export default {
 @import '../assets/styles/_mixins'
 
 section
-  background $blue
-  background-image url('../assets/images/ctaBackground.svg')
+  // background $blue
+  background-image url('~/assets/images/ctaBackground.svg')
   border-radius 150px 0 150px 0
 
 .cta-banner__content
