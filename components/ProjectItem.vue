@@ -1,6 +1,7 @@
 <template>
   <li>
     <h2>{{ proj.fields.title }}</h2>
+    <h3>{{ proj.fields.subTitle }}</h3>
     <p>{{ proj.fields.description }}</p>
     <view-live-button
       :url="proj.fields.url"
