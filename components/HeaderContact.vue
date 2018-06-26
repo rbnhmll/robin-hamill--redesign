@@ -18,6 +18,9 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-.header-about
-  display flex
+@import '../assets/styles/_vars'
+@import '../assets/styles/_mixins'
+
+.header-contact
+  color $white
 </style>
