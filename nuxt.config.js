@@ -43,7 +43,11 @@ module.exports = {
       }
     }
   },
-  plugins: ["~/plugins/contentful", "~/plugins/filters"],
+  plugins: [
+    "~/plugins/contentful",
+    "~/plugins/filters",
+    "~/plugins/font-awesome"
+  ],
   modules: ["@nuxtjs/dotenv"],
   generate: {
     routes() {
