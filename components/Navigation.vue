@@ -59,26 +59,26 @@ nav
   display flex
   justify-content space-between
   align-items center
+  padding 40px 0
 
 ul
   display flex
   list-style none
 
+li
+  flex 1 0 auto
+  margin 0 1.6rem
+
   a
+    border-radius 20px
     padding 5px
     display inline-block
     color $darkblue
 
-li
-  flex-shrink 0
-
-  a
-    border-radius 20px
-    padding 6px 20px
-
 a.cta
   background $blue
   color $white
+  padding 6px 20px
 
 a.nuxt-link-exact-active
   color $turquoise
