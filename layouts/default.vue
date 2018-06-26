@@ -19,7 +19,7 @@ export default {
 @import '../assets/styles/global'
 
 .wrapper
-  max-width 960px
+  max-width 1000px
   width 95%
   margin 0 auto
 </style>
