@@ -176,6 +176,11 @@ textarea
   h3
     grid-column 1 / -1
 
+  input[type='text']
+    margin-bottom 4.4rem
+    border none
+    border-bottom 1px solid $darkblue
+
 .timeline
   grid-column 1 / span 1
 
