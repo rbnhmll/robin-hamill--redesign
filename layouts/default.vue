@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <nuxt/>
+  <div :class="page">
+    <nuxt />
     <Vfooter />
   </div>
 </template>
@@ -11,6 +11,11 @@ import Vfooter from "~/components/VFooter.vue";
 export default {
   components: {
     Vfooter
+  },
+  computed: {
+    page() {
+      return this.$route.name;
+    }
   }
 };
 </script>
