@@ -15,6 +15,10 @@ body
   max-width 100rem
   width 90%
   margin 0 auto
+  &--medium
+    max-width 54rem
+    width 90%
+    margin 0 auto
   &--mini
     max-width 36rem
     width 90%
@@ -28,8 +32,14 @@ a
   text-decoration none
   color inherit
 
-h2
+.h1
   font-size 5.4rem
+  color $darkblue
+  font-weight 400
+
+.h2
+  font-size: 4.2rem
+  font-weight 400
 
 label
   color $grey
@@ -41,3 +51,29 @@ textarea
   &:focus,
   &:active
     box-shadow()
+
+// Page specific headers
+
+.index
+  header
+    background-image url('~/assets/images/homeSectionA.svg')
+    background-size cover
+    background-position bottom
+    padding-bottom 25.5rem
+
+.projects,
+.personal
+  header
+    background #DEE8FA
+    background-size cover
+    background-position bottom
+    padding-bottom 10.5rem
+
+.about
+  .header-about
+    background-image url('~/assets/images/aboutBackground.svg')
+    background-size 40%
+    background-repeat no-repeat
+    background-position left top
+    padding-top 10rem
+    margin-top -10rem
