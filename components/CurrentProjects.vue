@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h3>Current Projects</h3>
+    <h3 class="h1">Current Projects</h3>
     <ul>
       <li>Billig Fitness</li>
       <li>Wantboard</li>

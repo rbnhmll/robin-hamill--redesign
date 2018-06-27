@@ -1,8 +1,7 @@
 <template>
   <div>
-    <v-header>
-      <header-about></header-about>
-    </v-header>
+    <v-header />
+    <header-about />
     <cta-banner />
   </div>
 </template>
