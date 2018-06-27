@@ -17,9 +17,4 @@ export default {
 
 <style lang="stylus">
 @import '../assets/styles/global'
-
-.wrapper
-  max-width 1000px
-  width 95%
-  margin 0 auto
 </style>

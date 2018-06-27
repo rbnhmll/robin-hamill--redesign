@@ -1,8 +1,8 @@
 <template>
   <div class="wrapper">
     <form name="contact_form" method="POST" netlify>
-      <h3>About You</h3>
       <section class="about">
+        <h3>About You</h3>
         <div class="form-group form-group--first-name">
           <label for="firstName">First Name</label>
           <input type="text" id="firstName" name="First Name">
@@ -122,9 +122,25 @@ form
 
   h3
     color $darkblue
+    font-size 1.7rem
 
 .form-group
   position relative
+
+  &--first-name
+    grid-column 1 / span 1
+
+  &--last-name
+    grid-column 2 / span 1
+
+  &--email
+    grid-column 1 / span 2
+
+  &--company-name, &--tel
+    grid-column 4 / span 2
+
+  &--description
+    grid-column 1 / -1
 
   label
     position absolute
@@ -140,31 +156,20 @@ form
     border-radius 0.5rem
     padding 1.5rem 1rem
 
+  textarea
+    min-height 185px
+    max-width 100%
+    resize none
+
 .about
   grid-column 1 / -1
   display grid
   grid-template-columns 1fr 1fr 8rem 1fr 1fr
   grid-gap 1.5rem 1rem
 
-.form-group--first-name
-  grid-column 1 / span 1
-
-.form-group--last-name
-  grid-column 2 / span 1
-
-.form-group--email
-  grid-column 1 / span 2
-
-.form-group--company-name, .form-group--tel
-  grid-column 4 / span 2
-
-.form-group--description
-  grid-column 1 / -1
-
-textarea
-  min-height 185px
-  max-width 100%
-  resize none
+.about, .services
+  h3
+    grid-column 1 / -1
 
 .services
   grid-column 1 / -1
@@ -173,11 +178,8 @@ textarea
   align-items flex-end
   grid-gap 0 28px
 
-  h3
-    grid-column 1 / -1
-
   input[type='text']
-    margin-bottom 4.4rem
+    margin-bottom 2.9rem
     border none
     border-bottom 1px solid $darkblue
 
@@ -190,4 +192,8 @@ textarea
 .timeline, .budget
   input[type='range']
     width 100%
+
+.submit
+  grid-column 1 / -1
+  text-align center
 </style>

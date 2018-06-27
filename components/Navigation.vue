@@ -67,7 +67,7 @@ ul
 
 li
   flex 1 0 auto
-  margin 0 1.6rem
+  margin-left 3.2rem
 
   a
     border-radius 20px

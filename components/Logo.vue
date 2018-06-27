@@ -1,7 +1,8 @@
 <template>
   <h1>
     <nuxt-link to="/">
-      <img src="../assets/images/logo.png" alt="Logo: Robin Hamill.">
+      <img v-if="$route.name === 'contact'" src="../assets/images/logo.png" alt="Logo: Robin Hamill.">
+      <img v-else src="../assets/images/logo.png" alt="Logo: Robin Hamill.">
     </nuxt-link>
   </h1>
 </template>

@@ -11,6 +11,15 @@ body
   min-height 100vh
   color $black
 
+.wrapper
+  max-width 100rem
+  width 90%
+  margin 0 auto
+  &--mini
+    max-width 36rem
+    width 90%
+    margin 0 auto
+
 p
   font-family 'Crimson Text', serif
   font-style italic
@@ -24,3 +33,11 @@ h2
 
 label
   color $grey
+
+input,
+textarea
+  transition(box-shadow)
+  &:hover,
+  &:focus,
+  &:active
+    box-shadow()

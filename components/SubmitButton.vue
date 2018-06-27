@@ -18,10 +18,12 @@ export default {
 
 input[type=submit]
   text-decoration none
-  padding 1.5em 4em
+  padding 2rem
   border-radius 50px
   border none
   background $turquoise
   color $white
   width 470px
+  font-size 2.4rem
+  font-weight 600
 </style>

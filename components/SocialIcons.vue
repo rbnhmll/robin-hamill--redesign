@@ -41,7 +41,10 @@ export default {
 
 ul
   display flex
+  justify-content center
   list-style none
+  margin 0
+  padding 0
 
 li
   margin 0 0.5rem
@@ -51,7 +54,7 @@ a
   display flex
   justify-content center
   align-items center
-  color #7D8184
+  color $darkgrey
   border 2px solid #D8D8D8
   font-size 1.4rem
   width 3.2rem

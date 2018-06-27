@@ -5,9 +5,7 @@
       <div class="icon-wrapper">
         <img :src="imgUrl" :alt="service.name">
       </div>
-      <span>
-        {{ service.title }}
-      </span>
+      <span>{{ service.title }}</span>
     </label>
   </fieldset>
 </template>
@@ -32,8 +30,10 @@ export default {
 
 fieldset
   border none
+  padding 0
 
 .icon-wrapper
+  transition(box-shadow)
   display flex
   width 120px
   height 120px
@@ -41,26 +41,34 @@ fieldset
   align-items center
   border 1px solid $darkblue
   border-radius 5px
-  transition box-shadow 0.35s ease
 
 label
+  transition(transform)
   display block
   text-align center
-  transition transform 0.35s ease
+  cursor pointer
+  font-family 'Crimson Text', serif
+  font-style italic
+
+  &:hover .icon-wrapper
+    box-shadow 0 2px 5px 0 rgba($black, 0.5)
 
 img
   max-height 100%
   max-width 100%
 
 span
+  transition(color)
   display block
   text-align center
-  font-family 'Crimson Text', serif
   margin-top 10px
 
 input:checked + label
   transform translateY(-1.5rem)
 
   .icon-wrapper
-    box-shadow 0 2px 5px 0 rgba($black, 0.5)
+    box-shadow()
+
+  span
+    color $black
 </style>
