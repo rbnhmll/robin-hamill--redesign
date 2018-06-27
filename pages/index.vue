@@ -1,28 +1,44 @@
 <template>
   <div>
-    <Vheader>
-      <HeaderHero />
-    </Vheader>
-    <Methodology />
-    <CurrentProjects />
+    <v-header>
+      <header-hero />
+    </v-header>
+    <featured-projects :projects="projects" />
+    <methodology />
     <cta-banner />
   </div>
 </template>
 
 <script>
-import Vheader from "~/components/VHeader.vue";
+import client from "~/plugins/contentful";
+
+import VHeader from "~/components/VHeader.vue";
 import HeaderHero from "~/components/HeaderHero.vue";
 import CtaBanner from "~/components/CtaBanner";
+import FeaturedProjects from "~/components/FeaturedProjects";
 import CurrentProjects from "~/components/CurrentProjects";
 import Methodology from "~/components/Methodology";
 
 export default {
   components: {
-    Vheader,
+    VHeader,
     HeaderHero,
     CtaBanner,
+    FeaturedProjects,
     CurrentProjects,
     Methodology
+  },
+  asyncData() {
+    return client
+      .getEntries({
+        content_type: "projects"
+      })
+      .then(entry => {
+        return {
+          projects: entry.items
+        };
+      })
+      .catch(err => console.log(err));
   }
 };
 </script>
