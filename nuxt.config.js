@@ -13,7 +13,65 @@ module.exports = {
       { hid: "description", name: "description", content: "Nuxt.js project" },
       { name: "msapplication-square70x70logo", content: "/smalltile.png" },
       { name: "msapplication-square150x150logo", content: "/mediumtile.png" },
-      { name: "msapplication-square310x310logo", content: "/largetile.png" }
+      { name: "msapplication-square310x310logo", content: "/largetile.png" },
+      {
+        name: "keywords",
+        content:
+          "Robin, Hamill, Robin Hamill, Front End Development, Front End Developer, Web Application, Web Application Developer, Shopify, Shopify Developer, Consultant, Shopify Consultant, e-commerce, ecommerce, Full-stack Developer, Rails Developer,  Toronto, Developer, Dev"
+      },
+      {
+        name: "description",
+        content:
+          "Independent Shopify and full-stack web application developer in Toronto"
+      },
+      {
+        name: "author",
+        content: "Robin Hamill"
+      },
+      {
+        property: "og:title",
+        title: "Robin Hamill • Independent Developer",
+        content: "Robin Hamill • Independent Developer"
+      },
+      {
+        property: "og:site_name",
+        title: "Robin Hamill • Independent Developer",
+        content: "Robin Hamill • Independent Developer"
+      },
+      {
+        property: "og:url",
+        content: "https://www.robinhamill.com/"
+      },
+      {
+        property: "og:description",
+        content:
+          "Independent Shopify and full-stack web application developer in Toronto"
+      },
+      {
+        property: "og:type",
+        content: "website"
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image"
+      },
+      {
+        name: "twitter:site",
+        content: "https://www.robinhamill.com/"
+      },
+      {
+        name: "twitter:creator",
+        content: "@rbnhmll"
+      },
+      {
+        name: "twitter:title",
+        content: "Robin Hamill"
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Independent Shopify and full-stack web application developer in Toronto"
+      }
     ],
     link: [
       // { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
