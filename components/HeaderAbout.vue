@@ -3,7 +3,7 @@
     <div class="wrapper">
       <img src="~/assets/images/robinHeadshotSquare.jpg" alt="Robin Hamill headshot">
       <h2 class="header-about__title">Hi, I'm Robin.</h2>
-      <p>I'm an independent Shopify and web application developer in Toronto. I build intuitive and functional web apps and e-commerce stores that engage users and solve problems.</p>
+      <p>I'm an independent Shopify and web application developer in Toronto. I help online merchants create unique buying experience that drive sales.</p>
     </div>
   </section>
 </template>
