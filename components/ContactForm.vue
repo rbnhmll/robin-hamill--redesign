@@ -4,28 +4,28 @@
       <section class="about">
         <h3>About You</h3>
         <div class="form-group form-group--first-name">
-          <label for="firstName">First Name</label>
-          <input type="text" id="firstName" name="First Name">
+          <input type="text" id="firstName" name="First Name" required>
+          <label for="firstName">First Name *</label>
         </div>        
         <div class="form-group form-group--last-name">
-          <label for="lastName">Last Name</label>
-          <input type="text" id="lastName" name="Last Name">
+          <input type="text" id="lastName" name="Last Name" required>
+          <label for="lastName">Last Name *</label>
         </div>
         <div class="form-group form-group--company-name">
-          <label for="companyName">Company Name</label>
           <input type="text" id="companyName" name="Company Name">
+          <label for="companyName">Company Name</label>
         </div>        
         <div class="form-group form-group--email">
-          <label for="email">Enter Your Email</label>
-          <input type="email" id="email" name="Email">
+          <input type="email" id="email" name="Email" required>
+          <label for="email">Enter Your Email *</label>
         </div>
         <div class="form-group form-group--tel">
-          <label for="tel">Phone Number</label>
           <input type="tel" id="tel" name="Telephone">
+          <label for="tel">Phone Number</label>
         </div>
         <div class="form-group form-group--description">
-          <label for="description">Describe Your Project</label>
-          <textarea name="Description" id="description"></textarea>
+          <textarea name="Description" id="description" required></textarea>
+          <label for="description">Describe Your Project *</label>
         </div>
       </section>
       
@@ -148,6 +148,9 @@ form
     left 1rem
     line-height 1
     font-size 1.2rem
+    padding 5px
+    background $white
+    transition 0.3s
 
   input, textarea
     background $white
@@ -155,6 +158,10 @@ form
     border 1px solid $darkblue
     border-radius 0.5rem
     padding 1.5rem 1rem
+
+    &:hover, &:focus, &:active
+      & + label
+        top -1rem
 
   textarea
     min-height 185px

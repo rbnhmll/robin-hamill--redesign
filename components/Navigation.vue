@@ -64,15 +64,19 @@ nav
 ul
   display flex
   list-style none
+  padding 0
+  align-items center
 
 li
   flex 1 0 auto
-  margin-left 3.2rem
+
+  &+li
+    margin-left 3.2rem
 
   a
     border-radius 20px
     padding 5px
-    display inline-block
+    display block
     color $darkblue
 
 a.cta

@@ -35,7 +35,7 @@ export default {
         },
         {
           class: "development",
-          title: "Development",
+          title: "Creation",
           image: "development.png",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptatibus quod ea pariatur facilis nobis, assumenda voluptas iste sed totam suscipit quam. Nisi, aliquam?"
@@ -89,6 +89,7 @@ h4
     max-width 15rem
     max-height 14.5rem
     transform translate(-50%, -50%)
+    z-index -1
 
   &--exploration
     grid-column 1 / span 1

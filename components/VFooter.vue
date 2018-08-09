@@ -42,5 +42,5 @@ footer
   justify-content space-between
   font-size 1.4rem
   color $darkgrey
-  margin-bottom 2rem
+  padding-bottom 2rem
 </style>
