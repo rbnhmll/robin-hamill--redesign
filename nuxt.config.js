@@ -183,7 +183,11 @@ module.exports = {
     "~/plugins/filters",
     "~/plugins/font-awesome"
   ],
-  modules: ["@nuxtjs/dotenv"],
+  modules: ["@nuxtjs/dotenv", "@nuxtjs/vuetify"],
+  vuetify: {
+    // Vuetify options
+    // theme: {}
+  },
   generate: {
     routes() {
       return client
