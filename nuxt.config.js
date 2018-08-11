@@ -156,6 +156,7 @@ module.exports = {
       }
     ]
   },
+  css: ["~/assets/styles/global.styl"],
   /*
   ** Customize the progress bar color
   */
@@ -186,7 +187,7 @@ module.exports = {
   modules: ["@nuxtjs/dotenv", "@nuxtjs/vuetify"],
   vuetify: {
     // Vuetify options
-    // theme: {}
+    // theme: { }
   },
   generate: {
     routes() {

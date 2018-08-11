@@ -45,14 +45,77 @@
         <h3>Timeline</h3>
 
         <label class="visuallyhidden" for="timeline">Timeline</label>
-        <input type="range" name="timeline" id="timeline">
+        <v-text-field
+          v-model="timeline[0]"
+          class="mt-0"
+          hide-details
+          single-line
+          type="number"
+        ></v-text-field>
+        <v-range-slider
+          v-model="timeline"
+          :max="24"
+          :min="1"
+          :step="1"
+        ></v-range-slider>
+
+        <v-text-field
+          v-model="timeline[1]"
+          class="mt-0"
+          hide-details
+          single-line
+          type="number"
+        ></v-text-field>
       </section>
 
       <section class="budget">
         <h3>Budget</h3>
 
         <label class="visuallyhidden" for="budget">Budget</label>
-        <input type="range" name="budget" id="budget">
+        <v-container
+          fluid
+          grid-list-lg
+        >
+          <v-layout
+            row
+            wrap
+          >
+            <v-flex
+              shrink
+              style="width: 60px"
+            >
+              <v-text-field
+                v-model="budget[0]"
+                class="mt-0"
+                hide-details
+                single-line
+                type="number"
+              ></v-text-field>
+            </v-flex>
+
+            <v-flex>
+              <v-range-slider
+                v-model="budget"
+                :max="100000"
+                :min="5000"
+                :step="500"
+              ></v-range-slider>
+            </v-flex>
+
+            <v-flex
+              shrink
+              style="width: 60px"
+            >
+              <v-text-field
+                v-model="budget[1]"
+                class="mt-0"
+                hide-details
+                single-line
+                type="number"
+              ></v-text-field>
+            </v-flex>
+          </v-layout>
+        </v-container>
       </section>
       <section class="submit">
         <submit-button value="Send Message" />
@@ -73,6 +136,8 @@ export default {
   },
   data() {
     return {
+      timeline: [1, 12],
+      budget: [5000, 10000],
       services: [
         {
           name: "Service",

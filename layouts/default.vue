@@ -1,8 +1,10 @@
 <template>
-  <div :class="page">
-    <nuxt />
-    <Vfooter />
-  </div>
+  <v-app>
+    <div :class="page">
+      <nuxt />
+      <Vfooter />
+    </div>
+  </v-app>
 </template>
 
 <script>
@@ -21,5 +23,4 @@ export default {
 </script>
 
 <style lang="stylus">
-@import '../assets/styles/global'
 </style>

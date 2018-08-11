@@ -89,7 +89,7 @@ h4
     max-width 15rem
     max-height 14.5rem
     transform translate(-50%, -50%)
-    z-index -1
+    // z-index -1
 
   &--exploration
     grid-column 1 / span 1
