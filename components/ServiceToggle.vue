@@ -1,9 +1,20 @@
 <template>
   <fieldset>
-    <input class="visuallyhidden" type="radio" :name="service.name" :id="service.id" :value="service.name">
+    <input
+      :id="service.id"
+      :value="service.title"
+      :name="service.name"
+      :checked="selected === service.title"
+      class="visuallyhidden"
+      type="radio"
+      @change="$emit('serviceEvent', service.title)"
+    >
     <label :for="service.id">
       <div class="icon-wrapper">
-        <img :src="imgUrl" :alt="service.name">
+        <img
+          :src="imgUrl"
+          :alt="service.name"
+        >
       </div>
       <span>{{ service.title }}</span>
     </label>
@@ -11,22 +22,31 @@
 </template>
 
 <script>
-const images = require.context("~/assets/images", false, /\.png$/);
+const images = require.context('~/assets/images', false, /\.png$/)
 
 export default {
-  name: "ServiceToggle",
-  props: ["service"],
+  name: 'ServiceToggle',
+  props: {
+    service: {
+      type: Object,
+      default: () => {}
+    },
+    selected: {
+      type: String,
+      default: ''
+    }
+  },
   computed: {
     imgUrl() {
-      return images(`./${this.service.image}`);
+      return images(`./${this.service.image}`)
     }
   }
-};
+}
 </script>
 
 <style scoped lang="stylus">
-@import '../assets/styles/_vars'
-@import '../assets/styles/_mixins'
+@import '~assets/styles/_vars'
+@import '~assets/styles/_mixins'
 
 fieldset
   border none

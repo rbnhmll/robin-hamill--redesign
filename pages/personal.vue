@@ -6,12 +6,12 @@
 </template>
 
 <script>
-import client from "~/plugins/contentful";
-import Vheader from "~/components/VHeader.vue";
-import ProjectLoop from "~/components/ProjectLoop.vue";
+import client from '~/plugins/contentful'
+import Vheader from '~/components/VHeader.vue'
+import ProjectLoop from '~/components/ProjectLoop.vue'
 
 export default {
-  name: "Personal",
+  name: 'Personal',
   components: {
     Vheader,
     ProjectLoop
@@ -19,19 +19,19 @@ export default {
   asyncData() {
     return client
       .getEntries({
-        content_type: "personalProject"
+        content_type: 'personalProject'
       })
       .then(entry => {
         return {
           projects: entry.items
-        };
+        }
       })
-      .catch(err => console.log(err));
+      .catch(err => console.log(err))
   },
   head: {
     title: `Robin Hamill • Personal Projects`
   }
-};
+}
 </script>
 
 <style scoped lang="stylus">

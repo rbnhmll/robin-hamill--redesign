@@ -1,6 +1,9 @@
 <template>
   <ul>
-    <li v-for="icon in icons" :key="icon.name">
+    <li
+      v-for="icon in icons"
+      :key="icon.name"
+    >
       <font-awesome-icon :icon="icon.iconKey" />
     </li>
   </ul>
@@ -8,31 +11,31 @@
 
 <script>
 export default {
-  name: "TechIcons",
+  name: 'TechIcons',
   data() {
     return {
       icons: [
         {
-          name: "Shopify",
-          iconKey: ["fab", "twitter"]
+          name: 'Shopify',
+          iconKey: ['fab', 'twitter']
         },
         {
-          name: "Shopify Plus",
-          iconKey: ["fab", "github"]
+          name: 'Shopify Plus',
+          iconKey: ['fab', 'github']
         },
         {
-          name: "Vue",
-          iconKey: ["fab", "codepen"]
+          name: 'Vue',
+          iconKey: ['fab', 'codepen']
         }
       ]
-    };
+    }
   }
-};
+}
 </script>
 
 <style scoped lang="stylus">
-@import '../assets/styles/_vars'
-@import '../assets/styles/_mixins'
+@import '~assets/styles/_vars'
+@import '~assets/styles/_mixins'
 
 ul
   display flex

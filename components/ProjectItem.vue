@@ -9,8 +9,8 @@
       View Live
     </view-live-button>
     <case-study-button
-      :url="proj.fields.slug | sub('/projects/')"
       v-if="proj.fields.hasCaseStudy"
+      :url="proj.fields.slug | sub('/projects/')"
     >
       View Case Study
     </case-study-button>
@@ -18,17 +18,22 @@
 </template>
 
 <script>
-import ViewLiveButton from "~/components/ViewLiveButton";
-import CaseStudyButton from "~/components/CaseStudyButton";
+import ViewLiveButton from '~/components/ViewLiveButton'
+import CaseStudyButton from '~/components/CaseStudyButton'
 
 export default {
-  name: "ProjectItem",
-  props: ["proj"],
+  name: 'ProjectItem',
   components: {
     ViewLiveButton,
     CaseStudyButton
+  },
+  props: {
+    proj: {
+      type: Object,
+      default: () => {}
+    }
   }
-};
+}
 </script>
 
 <style scoped lang="stylus">

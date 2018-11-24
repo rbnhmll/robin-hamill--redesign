@@ -9,13 +9,13 @@
 </template>
 
 <script>
-import Vheader from "~/components/VHeader";
-import HeaderContact from "~/components/HeaderContact";
-import ContactForm from "~/components/ContactForm";
-import CurrentProjects from "~/components/CurrentProjects";
+import Vheader from '~/components/VHeader'
+import HeaderContact from '~/components/HeaderContact'
+import ContactForm from '~/components/ContactForm'
+import CurrentProjects from '~/components/CurrentProjects'
 
 export default {
-  name: "Contact",
+  name: 'Contact',
   components: {
     Vheader,
     HeaderContact,
@@ -25,7 +25,7 @@ export default {
   head: {
     title: `Robin Hamill • Contact`
   }
-};
+}
 </script>
 
 <style scoped lang="stylus">

@@ -2,24 +2,24 @@
   <header class="v-header">
     <div class="wrapper">
       <navigation/>
-      <slot></slot>
+      <slot />
     </div>
   </header>
 </template>
 
 <script>
-import Navigation from "./Navigation.vue";
+import Navigation from './Navigation.vue'
 
 export default {
-  name: "VHeader",
+  name: 'VHeader',
   components: {
     Navigation
   }
-};
+}
 </script>
 
 
 <style scoped lang="stylus">
-@import '../assets/styles/_vars'
-@import '../assets/styles/_mixins'
+@import '~assets/styles/_vars'
+@import '~assets/styles/_mixins'
 </style>

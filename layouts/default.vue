@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Vfooter from "~/components/VFooter.vue";
+import Vfooter from '~/components/VFooter.vue'
 
 export default {
   components: {
@@ -16,10 +16,10 @@ export default {
   },
   computed: {
     page() {
-      return this.$route.name;
+      return this.$route.name
     }
   }
-};
+}
 </script>
 
 <style lang="stylus">

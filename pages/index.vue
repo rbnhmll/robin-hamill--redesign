@@ -11,14 +11,14 @@
 </template>
 
 <script>
-import client from "~/plugins/contentful";
+import client from '~/plugins/contentful'
 
-import VHeader from "~/components/VHeader.vue";
-import HeaderHero from "~/components/HeaderHero.vue";
-import CtaBanner from "~/components/CtaBanner";
-import FeaturedProjects from "~/components/FeaturedProjects";
-import CurrentProjects from "~/components/CurrentProjects";
-import Methodology from "~/components/Methodology";
+import VHeader from '~/components/VHeader.vue'
+import HeaderHero from '~/components/HeaderHero.vue'
+import CtaBanner from '~/components/CtaBanner'
+import FeaturedProjects from '~/components/FeaturedProjects'
+import CurrentProjects from '~/components/CurrentProjects'
+import Methodology from '~/components/Methodology'
 
 export default {
   components: {
@@ -32,16 +32,16 @@ export default {
   asyncData() {
     return client
       .getEntries({
-        content_type: "projects"
+        content_type: 'projects'
       })
       .then(entry => {
         return {
           projects: entry.items
-        };
+        }
       })
-      .catch(err => console.log(err));
+      .catch(err => console.log(err))
   }
-};
+}
 </script>
 
 <style lang="stylus">

@@ -1,18 +1,18 @@
 <template>
   <div>
-    <Vheader></Vheader>
+    <Vheader />
     <project-loop :projects="projects" />
   </div>
 </template>
 
 <script>
-import client from "~/plugins/contentful";
+import client from '~/plugins/contentful'
 
-import Vheader from "~/components/VHeader.vue";
-import ProjectLoop from "~/components/ProjectLoop.vue";
+import Vheader from '~/components/VHeader.vue'
+import ProjectLoop from '~/components/ProjectLoop.vue'
 
 export default {
-  name: "ProjectsIndex",
+  name: 'ProjectsIndex',
   components: {
     Vheader,
     ProjectLoop
@@ -20,19 +20,19 @@ export default {
   asyncData() {
     return client
       .getEntries({
-        content_type: "projects"
+        content_type: 'projects'
       })
       .then(entry => {
         return {
           projects: entry.items
-        };
+        }
       })
-      .catch(err => console.log(err));
+      .catch(err => console.log(err))
   },
   head: {
     title: `Robin Hamill • Projects`
   }
-};
+}
 </script>
 
 <style scoped lang="stylus">

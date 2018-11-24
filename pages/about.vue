@@ -7,12 +7,12 @@
 </template>
 
 <script>
-import VHeader from "~/components/VHeader";
-import HeaderAbout from "~/components/HeaderAbout";
-import CtaBanner from "~/components/CtaBanner";
+import VHeader from '~/components/VHeader'
+import HeaderAbout from '~/components/HeaderAbout'
+import CtaBanner from '~/components/CtaBanner'
 
 export default {
-  name: "About",
+  name: 'About',
   components: {
     VHeader,
     HeaderAbout,
@@ -21,7 +21,7 @@ export default {
   head: {
     title: `Robin Hamill • About`
   }
-};
+}
 </script>
 
 <style scoped lang="stylus">

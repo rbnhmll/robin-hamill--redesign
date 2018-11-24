@@ -1,20 +1,28 @@
 <template>
-  <input type="submit" :value="value">
+  <input
+    :value="value"
+    type="submit"
+  >
 </template>
 
 <script>
 export default {
-  name: "SubmitButton",
-  props: ["value"],
+  name: 'SubmitButton',
+  props: {
+    value: {
+      type: String,
+      default: ''
+    }
+  },
   data() {
-    return {};
+    return {}
   }
-};
+}
 </script>
 
 <style scoped lang="stylus">
-@import '../assets/styles/_vars'
-@import '../assets/styles/_mixins'
+@import '~assets/styles/_vars'
+@import '~assets/styles/_mixins'
 
 input[type=submit]
   text-decoration none

@@ -1,22 +1,27 @@
 <template>
   <nuxt-link :to="url">
-    <slot></slot>
+    <slot />
   </nuxt-link>
 </template>
 
 <script>
 export default {
-  name: "CaseStudyButton",
-  props: ["url"],
+  name: 'CaseStudyButton',
+  props: {
+    url: {
+      type: String,
+      default: ''
+    }
+  },
   data() {
-    return {};
+    return {}
   }
-};
+}
 </script>
 
 <style scoped lang="stylus">
-@import '../assets/styles/_vars'
-@import '../assets/styles/_mixins'
+@import '~assets/styles/_vars'
+@import '~assets/styles/_mixins'
 
 a
   display inline-block

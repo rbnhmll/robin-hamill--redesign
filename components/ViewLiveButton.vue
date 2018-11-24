@@ -1,22 +1,30 @@
 <template>
-  <a :href="url" target="_blank">
-    <slot></slot>
+  <a
+    :href="url"
+    target="_blank"
+  >
+    <slot />
   </a>
 </template>
 
 <script>
 export default {
-  name: "ViewLiveButton",
-  props: ["url"],
+  name: 'ViewLiveButton',
+  props: {
+    url: {
+      type: String,
+      default: ''
+    }
+  },
   data() {
-    return {};
+    return {}
   }
-};
+}
 </script>
 
 <style scoped lang="stylus">
-@import '../assets/styles/_vars'
-@import '../assets/styles/_mixins'
+@import '~assets/styles/_vars'
+@import '~assets/styles/_mixins'
 
 a
   display inline-block

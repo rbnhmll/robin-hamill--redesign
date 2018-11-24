@@ -1,20 +1,29 @@
 <template>
-    <nuxt-link :to="url">See More Projects</nuxt-link>
+  <nuxt-link :to="url">See More Projects</nuxt-link>
 </template>
 
 <script>
 export default {
-  name: "SeeMoreButton",
-  props: ["url", "value"],
+  name: 'SeeMoreButton',
+  props: {
+    url: {
+      type: String,
+      default: ''
+    },
+    value: {
+      type: String,
+      default: ''
+    }
+  },
   data() {
-    return {};
+    return {}
   }
-};
+}
 </script>
 
 <style scoped lang="stylus">
-@import '../assets/styles/_vars'
-@import '../assets/styles/_mixins'
+@import '~assets/styles/_vars'
+@import '~assets/styles/_mixins'
 
 a
   text-decoration none

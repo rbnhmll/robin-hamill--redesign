@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Vheader></Vheader>
+    <Vheader />
 
     <div class="wrapper">
       <h2>{{ proj.fields.title }}</h2>
@@ -15,39 +15,39 @@
 </template>
 
 <script>
-import client from "~/plugins/contentful";
+import client from '~/plugins/contentful'
 
-import Vheader from "~/components/VHeader.vue";
-import ViewLiveButton from "~/components/ViewLiveButton";
+import Vheader from '~/components/VHeader.vue'
+import ViewLiveButton from '~/components/ViewLiveButton'
 
 export default {
-  name: "ProjectsSlug",
+  name: 'ProjectsSlug',
   components: {
     Vheader,
     ViewLiveButton
   },
   asyncData({ params, error, payload }) {
     if (payload) {
-      post: payload;
+      post: payload
     }
     return client
       .getEntries({
-        content_type: "projects",
-        "fields.slug": params.slug
+        content_type: 'projects',
+        'fields.slug': params.slug
       })
       .then(entry => {
         return {
           proj: entry.items[0]
-        };
+        }
       })
-      .catch(err => console.log(err));
+      .catch(err => console.log(err))
   },
   head() {
     return {
       title: `Case Study • ${this.proj.fields.title}`
-    };
+    }
   }
-};
+}
 </script>
 
 <style scoped lang="stylus">

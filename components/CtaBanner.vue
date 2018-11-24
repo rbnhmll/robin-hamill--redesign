@@ -13,23 +13,23 @@
 </template>
 
 <script>
-import CtaButton from "./CtaButton";
+import CtaButton from './CtaButton'
 
 export default {
-  name: "CtaBanner",
+  name: 'CtaBanner',
   components: {
     CtaButton
   }
-};
+}
 </script>
 
 <style scoped lang="stylus">
-@import '../assets/styles/_vars'
-@import '../assets/styles/_mixins'
+@import '~assets/styles/_vars'
+@import '~assets/styles/_mixins'
 
 section
   // background $blue
-  background-image url('~/assets/images/ctaBackground.svg')
+  background-image url('~assets/images/ctaBackground.svg')
   border-radius 150px 0 150px 0
 
 .cta-banner__content

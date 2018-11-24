@@ -7,13 +7,13 @@
 
 <script>
 export default {
-  name: "HeaderHero"
-};
+  name: 'HeaderHero'
+}
 </script>
 
 <style scoped lang="stylus">
-@import '../assets/styles/_vars'
-@import '../assets/styles/_mixins'
+@import '~assets/styles/_vars'
+@import '~assets/styles/_mixins'
 
 .header-hero
   text-align center

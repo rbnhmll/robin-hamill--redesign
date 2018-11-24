@@ -1,7 +1,10 @@
 <template>
   <section class="header-about">
     <div class="wrapper">
-      <img src="~/assets/images/robinHeadshotSquare.jpg" alt="Robin Hamill headshot">
+      <img
+        src="~/assets/images/robinHeadshotSquare.jpg"
+        alt="Robin Hamill headshot"
+      >
       <h2 class="header-about__title">Hi, I'm Robin.</h2>
       <p>I'm an independent Shopify and web application developer in Toronto. I help online merchants create unique buying experience that drive sales.</p>
     </div>
@@ -10,13 +13,13 @@
 
 <script>
 export default {
-  name: "HeaderAbout"
-};
+  name: 'HeaderAbout'
+}
 </script>
 
 <style scoped lang="stylus">
-@import '../assets/styles/_vars'
-@import '../assets/styles/_mixins'
+@import '~assets/styles/_vars'
+@import '~assets/styles/_mixins'
 
 .header-about
   .wrapper

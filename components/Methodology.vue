@@ -8,7 +8,10 @@
           :class="['step', `step--${step.class}`]"
           :key="i"
         >
-          <img :src="images(`./${step.image}`)" alt="">
+          <img
+            :src="images(`./${step.image}`)"
+            alt=""
+          >
           <h4>{{ step.title }}</h4>
           <p>{{ step.description }}</p>
         </div>
@@ -18,48 +21,48 @@
 </template>
 
 <script>
-const images = require.context("~/assets/images", false, /\.png$/);
+const images = require.context('~/assets/images', false, /\.png$/)
 
 export default {
-  name: "Methodology",
+  name: 'Methodology',
   data() {
     return {
       images,
       steps: [
         {
-          class: "exploration",
-          title: "Exploration",
-          image: "exploration.png",
+          class: 'exploration',
+          title: 'Exploration',
+          image: 'exploration.png',
           description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptatibus quod ea pariatur facilis nobis, assumenda voluptas iste sed totam suscipit quam. Nisi, aliquam?"
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptatibus quod ea pariatur facilis nobis, assumenda voluptas iste sed totam suscipit quam. Nisi, aliquam?'
         },
         {
-          class: "development",
-          title: "Creation",
-          image: "development.png",
+          class: 'development',
+          title: 'Creation',
+          image: 'development.png',
           description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptatibus quod ea pariatur facilis nobis, assumenda voluptas iste sed totam suscipit quam. Nisi, aliquam?"
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptatibus quod ea pariatur facilis nobis, assumenda voluptas iste sed totam suscipit quam. Nisi, aliquam?'
         },
         {
-          class: "growth",
-          title: "Growth",
-          image: "growth.png",
+          class: 'growth',
+          title: 'Growth',
+          image: 'growth.png',
           description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptatibus quod ea pariatur facilis nobis, assumenda voluptas iste sed totam suscipit quam. Nisi, aliquam?"
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptatibus quod ea pariatur facilis nobis, assumenda voluptas iste sed totam suscipit quam. Nisi, aliquam?'
         }
       ]
-    };
+    }
   }
-};
+}
 </script>
 
 <style scoped lang="stylus">
-@import '../assets/styles/_vars'
-@import '../assets/styles/_mixins'
+@import '~assets/styles/_vars'
+@import '~assets/styles/_mixins'
 
 .methodology
   padding 8.5rem 0
-  background-image url('~/assets/images/methodologyBackground.svg')
+  background-image url('~assets/images/methodologyBackground.svg')
   background-size 100%
   background-repeat no-repeat
   background-position top right

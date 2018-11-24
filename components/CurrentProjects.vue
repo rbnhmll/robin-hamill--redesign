@@ -5,23 +5,47 @@
       <div class="wrapper">
         <ul>
           <li>
-            <a href="http://billigfitness.dk/" target="_blank">
-              <img src="billigFitness.png" alt="Billig Fitness">
+            <a
+              href="http://billigfitness.dk/"
+              target="_blank"
+            >
+              <img
+                src="billigFitness.png"
+                alt="Billig Fitness"
+              >
             </a>
           </li>
           <li>
-            <a href="https://www.wantboard.ca/" target="_blank">
-              <img src="wantboard.png" alt="Wantboard">
+            <a
+              href="https://www.wantboard.ca/"
+              target="_blank"
+            >
+              <img
+                src="wantboard.png"
+                alt="Wantboard"
+              >
             </a>
           </li>
           <li>
-            <a href="https://thecode.ca/" target="_blank">
-              <img src="theCode.png" alt="The Code">
+            <a
+              href="https://thecode.ca/"
+              target="_blank"
+            >
+              <img
+                src="theCode.png"
+                alt="The Code"
+              >
             </a>
           </li>
           <li>
-            <a href="https://survivalstore.dk/" target="_blank">
-              <img src="survivalstore.png" alt="Survival Store">
+            <a
+              href="https://survivalstore.dk/"
+              target="_blank"
+            >
+              <img
+                src="survivalstore.png"
+                alt="Survival Store"
+              >
             </a>
           </li>
         </ul>
@@ -32,13 +56,13 @@
 
 <script>
 export default {
-  name: "CurrentProjects"
-};
+  name: 'CurrentProjects'
+}
 </script>
 
 <style scoped lang="stylus">
-@import '../assets/styles/_vars'
-@import '../assets/styles/_mixins'
+@import '~assets/styles/_vars'
+@import '~assets/styles/_mixins'
 
 section
   text-align center

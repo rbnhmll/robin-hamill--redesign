@@ -7,22 +7,27 @@
 </template>
 
 <script>
-import ProjectLoop from "~/components/ProjectLoop.vue";
-import SeeMoreButton from "~/components/SeeMoreButton.vue";
+import ProjectLoop from '~/components/ProjectLoop.vue'
+import SeeMoreButton from '~/components/SeeMoreButton.vue'
 
 export default {
-  name: "FeaturedProjects",
-  props: ["projects"],
+  name: 'FeaturedProjects',
   components: {
     ProjectLoop,
     SeeMoreButton
+  },
+  props: {
+    projects: {
+      type: Array,
+      default: () => []
+    }
   }
-};
+}
 </script>
 
 <style scoped lang="stylus">
-@import '../assets/styles/_vars'
-@import '../assets/styles/_mixins'
+@import '~assets/styles/_vars'
+@import '~assets/styles/_mixins'
 
 h2
   text-align center

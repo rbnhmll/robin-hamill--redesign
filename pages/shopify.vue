@@ -9,9 +9,9 @@
 </template>
 
 <script>
-import VHeader from "~/components/VHeader.vue";
-import HeaderHero from "~/components/HeaderHero.vue";
-import CtaBanner from "~/components/CtaBanner";
+import VHeader from '~/components/VHeader.vue'
+import HeaderHero from '~/components/HeaderHero.vue'
+import CtaBanner from '~/components/CtaBanner'
 
 export default {
   components: {
@@ -19,7 +19,7 @@ export default {
     HeaderHero,
     CtaBanner
   }
-};
+}
 </script>
 
 <style lang="stylus">
