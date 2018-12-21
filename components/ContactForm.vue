@@ -80,38 +80,35 @@
         >
       </section>
 
-      <section class="timeline">
-        <h3>Timeline</h3>
-        <label
-          class="visuallyhidden"
-          for="timeline"
-        >Timeline</label>
-        <span>{{ timelineRange }}</span>
-        <input
-          id="timeline"
-          v-model.number="selections.timeline"
-          :min="timeline[0]"
-          :max="timeline[1]"
-          type="range"
-        >
-      </section>
+      <RangeSlider
+        id="timeline"
+        :min="1"
+        :max="12"
+        :default-value="2"
+        name="Timeline"
+        unit-after="mo"
+      />
 
-      <section class="budget">
-        <h3>Budget</h3>
-        <label
-          class="visuallyhidden"
-          for="budget"
-        >Budget</label>
-        <span>{{ budgetRange }}</span>
-        <input
-          id="budget"
-          v-model.number="selections.budget"
-          :min="budget[0]"
-          :max="budget[1]"
-          type="range"
-          step="500"
-        >
-      </section>
+      <RangeSlider
+        id="budget"
+        :min="5000"
+        :max="50000"
+        :step="500"
+        :default-value="10000"
+        name="Budget"
+        unit-before="$"
+      />
+
+      <RangeSlider
+        id="budget"
+        name="Budget"
+        min="10"
+        max="100"
+        step="10"
+        unit-before="$"
+        default-value="10"
+      />
+
       <section class="submit">
         <submit-button value="Send Message" />
       </section>
@@ -122,12 +119,14 @@
 <script>
 import SubmitButton from '~/components/SubmitButton'
 import ServiceToggle from '~/components/ServiceToggle'
+import RangeSlider from '~/components/RangeSlider'
 
 export default {
   name: 'ContactForm',
   components: {
     SubmitButton,
-    ServiceToggle
+    ServiceToggle,
+    RangeSlider
   },
   data() {
     return {
@@ -170,30 +169,6 @@ export default {
           image: 'other.png'
         }
       ]
-    }
-  },
-  computed: {
-    timelineRange() {
-      let tl = ''
-      if (this.selections.timeline === this.timeline[0]) {
-        tl = `< ${this.selections.timeline} mo`
-      } else if (this.selections.timeline === this.timeline[1]) {
-        tl = `${this.selections.timeline} mo +`
-      } else {
-        tl = `${this.selections.timeline} mo`
-      }
-      return tl
-    },
-    budgetRange() {
-      let tl = ''
-      if (this.selections.budget === this.budget[0]) {
-        tl = `< $${this.selections.budget} `
-      } else if (this.selections.budget === this.budget[1]) {
-        tl = `$${this.selections.budget} +`
-      } else {
-        tl = `$${this.selections.budget}`
-      }
-      return tl
     }
   },
   methods: {
@@ -255,7 +230,7 @@ form
     font-size 1.2rem
     padding 5px
     background $white
-    transition 0.3s
+    transition(top)
 
   input, textarea
     background $white
@@ -300,10 +275,6 @@ form
 
 .budget
   grid-column -1 / span -1
-
-.timeline, .budget
-  input[type='range']
-    width 100%
 
 .submit
   grid-column 1 / -1

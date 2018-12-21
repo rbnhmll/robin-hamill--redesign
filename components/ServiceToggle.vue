@@ -67,7 +67,7 @@ label
   display block
   text-align center
   cursor pointer
-  font-family 'Crimson Text', serif
+  font-family $secondaryfont
   font-style italic
 
   &:hover .icon-wrapper

@@ -1,8 +1,6 @@
 @import '_setup'
-// @import '_vuetify'
 @import '_fonts'
 @import '_vars'
-
 
 html
   font-size 62.5%
@@ -11,11 +9,7 @@ body
   font-size 1.6rem
   min-height 100vh
   color $black
-
-.application.theme--light {
-  font-family 'Source Sans Pro', sans-serif
-  background $white
-}
+  font-family $mainfont
 
 .wrapper
   max-width 100rem
@@ -31,7 +25,7 @@ body
     margin 0 auto
 
 p
-  font-family 'Crimson Text', serif
+  font-family $secondaryfont
   font-style italic
   font-size 1.8rem
 
@@ -39,11 +33,13 @@ a
   text-decoration none
   color inherit
 
+h1,
 .h1
   font-size 5.4rem
   color $darkblue
   font-weight 400
 
+h2,
 .h2
   font-size: 4.2rem
   font-weight 400
