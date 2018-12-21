@@ -68,9 +68,18 @@ export default {
       return range
     },
     valPosition() {
-      const pos = ((this.selection - this.min) / this.max) * 100
+      const range = this.max - this.min
+      const ratio = this.selection - this.min
+      const posPercent = (ratio / range) * 100
 
-      return `left: calc(${pos}% + 15px)`
+      const offset = 15
+      const offsetRange = -30
+      const offsetRatio = posPercent * -15
+      const offsetPercent = (offsetRatio / -30) * 100
+
+      const offsetVal = (offsetRange * posPercent) / 100 + offset
+
+      return `left: calc(${posPercent}% + ${offsetVal}px)`
     }
   },
   mounted() {
@@ -126,6 +135,7 @@ input[type='range']
   border-radius 3px
   transform translateX(-50%) scale(0.7)
   opacity 0
+  white-space nowrap
   transition(transform, opacity)
 
 .rangeLimits

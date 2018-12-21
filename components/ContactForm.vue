@@ -101,16 +101,6 @@
         unit-before="$"
       />
 
-      <RangeSlider
-        id="budget"
-        :min="10"
-        :max="100"
-        :default-value="10"
-        :step="10"
-        name="Budget"
-        unit-before="$"
-      />
-
       <section class="submit">
         <submit-button value="Send Message"/>
       </section>
