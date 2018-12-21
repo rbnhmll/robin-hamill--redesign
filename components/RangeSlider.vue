@@ -136,6 +136,7 @@ input[type='range']
   transform translateX(-50%) scale(0.7)
   opacity 0
   white-space nowrap
+  box-shadow()
   transition(transform, opacity)
 
 .rangeLimits
