@@ -1,25 +1,25 @@
 <template>
   <div class="wrapper">
-    <form
-      name="contact_form"
-      method="POST"
-      netlify
-    >
+    <form name="contact_form" method="POST" netlify>
       <section class="about">
         <h3>About You</h3>
         <div class="form-group form-group--first-name">
           <input
+            v-check-fill
             id="firstName"
+            v-model="selections.firstName"
             type="text"
             name="First Name"
             required
           >
           <label for="firstName">First Name *</label>
-        </div>        
+        </div>
         <div class="form-group form-group--last-name">
           <input
+            v-check-fill
             id="lastName"
-            type="text"
+            v-model="selections.lastName"
+            ype="text"
             name="Last Name"
             required
           >
@@ -27,15 +27,19 @@
         </div>
         <div class="form-group form-group--company-name">
           <input
+            v-check-fill
             id="companyName"
+            v-model="selections.companyName"
             type="text"
             name="Company Name"
           >
           <label for="companyName">Company Name</label>
-        </div>        
+        </div>
         <div class="form-group form-group--email">
           <input
+            v-check-fill
             id="email"
+            v-model="selections.email"
             type="email"
             name="Email"
             required
@@ -43,26 +47,24 @@
           <label for="email">Enter Your Email *</label>
         </div>
         <div class="form-group form-group--tel">
-          <input
-            id="tel"
-            name="Telephone"
-            type="tel"
-          >
+          <input v-check-fill id="tel" v-model="selections.tel" name="Telephone" type="tel">
           <label for="tel">Phone Number</label>
         </div>
         <div class="form-group form-group--description">
           <textarea
+            v-check-fill
             id="description"
+            v-model="selections.description"
             name="Description"
             required
           />
           <label for="description">Describe Your Project *</label>
         </div>
       </section>
-      
+
       <section class="services">
         <h3>Services Needed</h3>
-        
+
         <service-toggle
           v-for="service in services"
           :service="service"
@@ -70,7 +72,7 @@
           :key="service.id"
           @serviceEvent="checkService($event)"
         />
-        
+
         <input
           id="other"
           ref="otherText"
@@ -101,16 +103,16 @@
 
       <RangeSlider
         id="budget"
+        :min="10"
+        :max="100"
+        :default-value="10"
+        :step="10"
         name="Budget"
-        min="10"
-        max="100"
-        step="10"
         unit-before="$"
-        default-value="10"
       />
 
       <section class="submit">
-        <submit-button value="Send Message" />
+        <submit-button value="Send Message"/>
       </section>
     </form>
   </div>
@@ -133,6 +135,12 @@ export default {
       timeline: [1, 12],
       budget: [5000, 50000],
       selections: {
+        firstName: '',
+        lastName: '',
+        companyName: '',
+        email: '',
+        tel: '',
+        description: '',
         service: '',
         timeline: 2,
         budget: 10000
@@ -239,7 +247,7 @@ form
     border-radius 0.5rem
     padding 1.5rem 1rem
 
-    &:hover, &:focus, &:active
+    &.filled, &:hover, &:focus, &:active
       & + label
         top -1rem
 

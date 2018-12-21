@@ -173,7 +173,8 @@ module.exports = {
   plugins: [
     '~/plugins/contentful',
     '~/plugins/filters',
-    '~/plugins/font-awesome'
+    '~/plugins/font-awesome',
+    '~/plugins/directives'
   ],
 
   /*
