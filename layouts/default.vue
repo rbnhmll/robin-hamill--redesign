@@ -1,10 +1,8 @@
 <template>
-  <v-app>
-    <div :class="page">
-      <nuxt />
-      <Vfooter />
-    </div>
-  </v-app>
+  <div :class="page">
+    <nuxt/>
+    <Vfooter/>
+  </div>
 </template>
 
 <script>
