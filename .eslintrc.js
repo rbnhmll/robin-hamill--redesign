@@ -2,10 +2,10 @@ module.exports = {
   root: true,
   env: {
     browser: true,
-    node: true,
+    node: true
   },
   parserOptions: {
-    parser: 'babel-eslint',
+    parser: 'babel-eslint'
   },
   extends: ['plugin:vue/recommended', 'plugin:prettier/recommended'],
   // required to lint *.vue files
@@ -14,5 +14,15 @@ module.exports = {
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-  },
-};
+    'vue/max-attributes-per-line': [
+      2,
+      {
+        singleline: 20,
+        multiline: {
+          max: 1,
+          allowFirstLine: false
+        }
+      }
+    ]
+  }
+}
