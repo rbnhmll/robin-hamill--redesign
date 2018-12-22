@@ -11,10 +11,7 @@
     >
     <label :for="service.id">
       <div class="icon-wrapper">
-        <img
-          :src="imgUrl"
-          :alt="service.name"
-        >
+        <img :src="imgUrl" :alt="service.name">
       </div>
       <span>{{ service.title }}</span>
     </label>
@@ -67,7 +64,7 @@ label
   display block
   text-align center
   cursor pointer
-  font-family $secondaryfont
+  font-family 'Crimson Text', serif
   font-style italic
 
   &:hover .icon-wrapper
