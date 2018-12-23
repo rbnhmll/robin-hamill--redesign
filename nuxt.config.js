@@ -227,10 +227,8 @@ module.exports = {
         })
     }
   },
-  vue: {
-    config: {
-      productionTip: true,
-      devtools: true
-    }
+  env: {
+    space: process.env.CTF_SPACE_ID,
+    accessToken: process.env.CTF_ACCESS_TOKEN
   }
 }
