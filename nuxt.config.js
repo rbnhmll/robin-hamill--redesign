@@ -229,7 +229,7 @@ module.exports = {
   },
   vue: {
     config: {
-      productionTip: false,
+      productionTip: true,
       devtools: true
     }
   }
