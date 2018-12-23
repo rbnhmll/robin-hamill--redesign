@@ -226,5 +226,11 @@ module.exports = {
           })
         })
     }
+  },
+  vue: {
+    config: {
+      productionTip: false,
+      devtools: true
+    }
   }
 }
