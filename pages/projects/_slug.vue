@@ -1,15 +1,11 @@
 <template>
   <div>
-    <Vheader />
+    <Vheader/>
 
     <div class="wrapper">
       <h2>{{ proj.fields.title }}</h2>
       <p>{{ proj.fields.description }}</p>
-      <view-live-button
-        :url="proj.fields.url"
-      >
-        View Live
-      </view-live-button>
+      <view-live-button :url="proj.fields.url">View Live</view-live-button>
     </div>
   </div>
 </template>
