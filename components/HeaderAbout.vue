@@ -1,8 +1,8 @@
 <template>
   <section class="header-about">
     <div class="wrapper">
-      <img
-        src="~/assets/images/robinHeadshotSquare.jpg"
+      <img 
+        src="~/assets/images/robinHeadshotSquare.jpg" 
         alt="Robin Hamill headshot"
       >
       <h2 class="header-about__title">Hi, I'm Robin.</h2>

@@ -11,7 +11,9 @@
     >
     <label :for="service.id">
       <div class="icon-wrapper">
-        <img :src="imgUrl" :alt="service.name">
+        <img 
+          :src="imgUrl" 
+          :alt="service.name">
       </div>
       <span>{{ service.title }}</span>
     </label>

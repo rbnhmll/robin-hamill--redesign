@@ -1,6 +1,6 @@
 <template>
-  <a
-    :href="url"
+  <a 
+    :href="url" 
     target="_blank"
   >
     <slot />

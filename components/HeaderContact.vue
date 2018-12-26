@@ -2,7 +2,9 @@
   <section class="header-contact wrapper--mini">
     <h2 class="h1">Let's work together!</h2>
     <p>Get in touch with me if you would like to kickstart your next web-app or e-commerce store, brain-storm your big idea, or play Codenames. I like to drink coffee.</p>
-    <SocialIcons icon-colour="#fff" border-colour="#fff"/>
+    <SocialIcons 
+      icon-colour="#fff" 
+      border-colour="#fff"/>
   </section>
 </template>
 

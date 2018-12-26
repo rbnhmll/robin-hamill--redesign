@@ -3,11 +3,8 @@
     <div class="wrapper cta-banner__content">
       <h4 class="cta-banner__message">Let's chat about bringing your business to life.</h4>
       <cta-button
-        class="cta-banner__button"
-        url="/contact"
-      >
-        Get in Touch!
-      </cta-button>
+        class="cta-banner__button" 
+        url="/contact">Get in Touch!</cta-button>
     </div>
   </section>
 </template>

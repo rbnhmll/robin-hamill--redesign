@@ -1,6 +1,9 @@
 <template>
   <div class="wrapper">
-    <form name="contact_form" method="POST" netlify>
+    <form 
+      name="contact_form" 
+      method="POST" 
+      netlify>
       <section class="about">
         <h3>About You</h3>
         <div class="form-group form-group--first-name">
@@ -47,7 +50,12 @@
           <label for="email">Enter Your Email *</label>
         </div>
         <div class="form-group form-group--tel">
-          <input v-check-fill id="tel" v-model="selections.tel" name="Telephone" type="tel">
+          <input 
+            v-check-fill 
+            id="tel" 
+            v-model="selections.tel" 
+            name="Telephone" 
+            type="tel">
           <label for="tel">Phone Number</label>
         </div>
         <div class="form-group form-group--description">

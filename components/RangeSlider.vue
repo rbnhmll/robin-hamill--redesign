@@ -2,9 +2,19 @@
   <section class="rangeSlider">
     <h3>{{ name }}</h3>
     <div class="rangeSlider__wrapper">
-      <label :for="id" class="visuallyhidden">{{ name }}</label>
-      <input :id="id" v-model.number="selection" :min="min" :max="max" :step="step" type="range">
-      <span :style="valPosition" class="valueMarker">{{ compRange }}</span>
+      <label 
+        :for="id" 
+        class="visuallyhidden">{{ name }}</label>
+      <input 
+        :id="id" 
+        v-model.number="selection" 
+        :min="min" 
+        :max="max" 
+        :step="step" 
+        type="range">
+      <span 
+        :style="valPosition" 
+        class="valueMarker">{{ compRange }}</span>
     </div>
     <div class="rangeLimits">
       <span>&#60; {{ unitBefore }}{{ min }} {{ unitAfter }}</span>
