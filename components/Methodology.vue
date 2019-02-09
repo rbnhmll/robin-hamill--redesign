@@ -70,7 +70,7 @@ export default {
 
 h4
   font-size 2.4rem
-  font-weight 600
+  // font-weight 600
   color $blue
   margin-top 0
 
