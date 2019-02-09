@@ -144,15 +144,6 @@ module.exports = {
         type: 'image/png',
         href: '/android-chrome-192x192.png',
         sizes: '192x192'
-      },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css?family=Crimson+Text:400,400i|Source+Sans+Pro:200,400,600'
-      },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Dosis|Lato'
       }
     ]
   },
