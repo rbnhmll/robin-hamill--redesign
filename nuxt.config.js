@@ -162,10 +162,10 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    './plugins/contentful',
-    './plugins/filters',
-    './plugins/font-awesome',
-    './plugins/directives'
+    '~/plugins/contentful',
+    '~/plugins/filters',
+    '~/plugins/font-awesome',
+    '~/plugins/directives'
   ],
 
   /*
@@ -176,6 +176,12 @@ module.exports = {
     '@nuxtjs/axios',
     ['@nuxtjs/dotenv', { systemvars: true }]
   ],
+
+  env: {
+    CTF_SPACE_ID: process.env.CTF_SPACE_ID,
+    CTF_CDA_ACCESS_TOKEN: process.env.CTF_CDA_ACCESS_TOKEN
+  },
+
   /*
   ** Axios module configuration
   */
