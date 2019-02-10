@@ -162,10 +162,10 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '~/plugins/contentful',
-    '~/plugins/filters',
-    '~/plugins/font-awesome',
-    '~/plugins/directives'
+    './plugins/contentful',
+    './plugins/filters',
+    './plugins/font-awesome',
+    './plugins/directives'
   ],
 
   /*
