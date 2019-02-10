@@ -1,7 +1,7 @@
 const pkg = require('./package')
 require('dotenv').config()
 // const client = require('./plugins/contentful')
-import { createClient } from '~/plugins/contentful.js'
+import { createClient } from './plugins/contentful.js'
 
 const client = createClient()
 
