@@ -1,9 +1,6 @@
 const pkg = require('./package')
-require('dotenv').config()
-// const client = require('./plugins/contentful')
-import { createClient } from './plugins/contentful.js'
 
-const client = createClient()
+import client from './plugins/contentful.js'
 
 module.exports = {
   mode: 'universal',
@@ -11,7 +8,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'Robin Hamill • Independent Developer',
+    title: 'Robin Hamill • Independent Shopify Developer',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -31,13 +28,13 @@ module.exports = {
       },
       {
         property: 'og:title',
-        title: 'Robin Hamill • Independent Developer',
-        content: 'Robin Hamill • Independent Developer'
+        title: 'Robin Hamill • Independent Shopify Developer',
+        content: 'Robin Hamill • Independent Shopify Developer'
       },
       {
         property: 'og:site_name',
-        title: 'Robin Hamill • Independent Developer',
-        content: 'Robin Hamill • Independent Developer'
+        title: 'Robin Hamill • Independent Shopify Developer',
+        content: 'Robin Hamill • Independent Shopify Developer'
       },
       {
         property: 'og:url',
@@ -177,13 +174,8 @@ module.exports = {
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
-    ['@nuxtjs/dotenv', { systemvars: true }]
+    ['@nuxtjs/dotenv']
   ],
-
-  env: {
-    CTF_SPACE_ID: process.env.CTF_SPACE_ID,
-    CTF_CDA_ACCESS_TOKEN: process.env.CTF_CDA_ACCESS_TOKEN
-  },
 
   /*
   ** Axios module configuration
@@ -201,6 +193,9 @@ module.exports = {
     */
     extend(config, ctx) {
       // Run ESLint on save
+      config.node = {
+        fs: 'empty'
+      }
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',

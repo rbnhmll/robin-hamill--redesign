@@ -1,13 +1,13 @@
 <template>
   <nav>
-    <logo />
+    <logo/>
     <ul>
       <li
-        v-for="page in pages"
+        v-for="page in pages" 
         :key="page.name"
       >
         <nuxt-link
-          :to="page.url"
+          :to="page.url" 
           :class="page.class">{{ page.name }}
         </nuxt-link>
       </li>

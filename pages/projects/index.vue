@@ -1,7 +1,7 @@
 <template>
   <div>
-    <Vheader />
-    <project-loop :projects="projects" />
+    <Vheader/>
+    <project-loop :projects="projects"/>
   </div>
 </template>
 

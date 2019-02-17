@@ -1,12 +1,12 @@
 <template>
   <div>
     <v-header>
-      <header-hero />
+      <header-hero/>
     </v-header>
-    <featured-projects :projects="projects" />
-    <methodology />
-    <current-projects />
-    <cta-banner />
+    <featured-projects :projects="projects"/>
+    <methodology/>
+    <current-projects/>
+    <cta-banner/>
   </div>
 </template>
 
