@@ -33,22 +33,25 @@ export default {
           class: 'exploration',
           title: 'Exploration',
           image: 'exploration.png',
-          description:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptatibus quod ea pariatur facilis nobis, assumenda voluptas iste sed totam suscipit quam. Nisi, aliquam?'
+          description: `
+            Together we invesigate the underlaying issues of your painpints in order to find for simplest and most effective approach.
+          `
         },
         {
           class: 'development',
           title: 'Creation',
           image: 'development.png',
-          description:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptatibus quod ea pariatur facilis nobis, assumenda voluptas iste sed totam suscipit quam. Nisi, aliquam?'
+          description: `
+            Carefully develop and deploy business-case specific solutions to better engage with your customers, and improve their shopping experience.
+          `
         },
         {
           class: 'growth',
           title: 'Growth',
           image: 'growth.png',
-          description:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptatibus quod ea pariatur facilis nobis, assumenda voluptas iste sed totam suscipit quam. Nisi, aliquam?'
+          description: `
+            Your customers stay on your site longer, buyt more, and return more often, making you one of their favorite retailers.
+          `
         }
       ]
     }
@@ -61,28 +64,31 @@ export default {
 @import '~assets/styles/_mixins'
 
 .methodology
-  padding 8.5rem 0
-  background-image url('~assets/images/methodologyBackground.svg')
-  background-size 100%
+  padding 5.5rem 0
+  // background-image url('~assets/images/methodologyBackground.svg')
+  background-size 60%
   background-repeat no-repeat
-  background-position top right
-  padding-bottom 16.5rem
+  background-position top right -10px
+  // border-top 1px solid $borderColour
 
 h4
   font-size 2.4rem
-  // font-weight 600
   color $blue
   margin-top 0
 
 .steps
-  margin-top 14.5rem
+  margin-top 10rem
   display grid
-  grid-gap 0 10rem
+  grid-gap 0 5rem
   grid-template-columns repeat(3, 1fr)
   grid-template-rows repeat(3, auto)
 
 .step
   position relative
+  box-shadow $shadow
+  padding 2.5rem
+  border-radius 25px
+  background rgba($white, 0.75)
 
   img
     position absolute
@@ -91,7 +97,7 @@ h4
     top 0
     max-width 15rem
     max-height 14.5rem
-    transform translate(-50%, -50%)
+    transform translate(-40%, -40%)
     // z-index -1
 
   &--exploration
@@ -100,9 +106,9 @@ h4
 
   &--development
     grid-column 2 / span 1
-    grid-row 3 / span 1
+    grid-row 2 / span 2
 
   &--growth
     grid-column 3 / span 1
-    grid-row 2 / span 2
+    grid-row 3 / span 2
 </style>
