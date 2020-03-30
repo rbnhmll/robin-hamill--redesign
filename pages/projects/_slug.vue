@@ -11,10 +11,12 @@
 </template>
 
 <script>
-import client from '~/plugins/contentful'
+import { createClient } from '~/plugins/contentful'
 
 import Vheader from '~/components/VHeader.vue'
 import ViewLiveButton from '~/components/ViewLiveButton'
+
+const client = createClient()
 
 export default {
   name: 'ProjectsSlug',

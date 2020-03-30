@@ -1,8 +1,13 @@
 const pkg = require('./package')
+const config = require('./.contentful.json')
 
 import client from './plugins/contentful.js'
 
 module.exports = {
+  env: {
+    CTF_SPACE_ID: config.CTF_SPACE_ID,
+    CTF_CDA_ACCESS_TOKEN: config.CTF_CDA_ACCESS_TOKEN
+  },
   mode: 'universal',
   /*
   ** Headers of the page

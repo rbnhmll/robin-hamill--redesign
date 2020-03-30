@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import client from '~/plugins/contentful'
+import { createClient } from '~/plugins/contentful'
 
 import VHeader from '~/components/VHeader.vue'
 import HeaderHero from '~/components/HeaderHero.vue'
@@ -19,6 +19,8 @@ import CtaBanner from '~/components/CtaBanner'
 import FeaturedProjects from '~/components/FeaturedProjects'
 import CurrentProjects from '~/components/CurrentProjects'
 import Methodology from '~/components/Methodology'
+
+const client = createClient()
 
 export default {
   components: {

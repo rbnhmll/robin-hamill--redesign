@@ -10,11 +10,13 @@
 </template>
 
 <script>
-import client from '~/plugins/contentful'
+import { createClient } from '~/plugins/contentful'
 
 import Vheader from '~/components/VHeader.vue'
 import ProjectLoop from '~/components/ProjectLoop.vue'
 import CtaBanner from '~/components/CtaBanner'
+
+const client = createClient()
 
 export default {
   name: 'ProjectsIndex',
