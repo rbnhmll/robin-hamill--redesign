@@ -72,7 +72,7 @@
 
       <section class="services">
         <h3>Services Needed</h3>
-
+        
         <service-toggle
           v-for="service in services"
           :service="service"
@@ -101,10 +101,10 @@
 
       <RangeSlider
         id="budget"
-        :min="5000"
-        :max="50000"
+        :min="budget.min"
+        :max="budget.max"
         :step="500"
-        :default-value="10000"
+        :default-value="selections.budget"
         name="Budget"
         unit-before="$"
       />
@@ -131,7 +131,10 @@ export default {
   data() {
     return {
       timeline: [1, 12],
-      budget: [5000, 50000],
+      budget: {
+        min: 5000,
+        max: 50000
+      },
       selections: {
         firstName: '',
         lastName: '',
@@ -152,15 +155,15 @@ export default {
         },
         {
           name: 'Service',
-          title: 'Web App',
-          id: 'webApp',
-          image: 'webApp.png'
-        },
-        {
-          name: 'Service',
           title: 'Shopify App',
           id: 'shopifyApp',
           image: 'shopify.png'
+        },
+        {
+          name: 'Service',
+          title: 'Web App',
+          id: 'webApp',
+          image: 'webApp.png'
         },
         {
           name: 'Service',
