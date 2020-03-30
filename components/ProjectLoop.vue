@@ -1,13 +1,13 @@
 <template>
-  <section class="wrapper">
-    <ul>
+  <div class="wrapper">
+    <section>
       <project-item
         v-for="proj in projects"
         :proj="proj"
         :key="proj.sys.id"
       />
-    </ul>
-  </section>
+    </section>
+  </div>
 </template>
 
 <script>
@@ -26,8 +26,8 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-ul
-  padding 0
-  margin 0
-  list-style-type none
+section
+  display grid
+  grid-template-columns 1fr
+  grid-gap 2rem
 </style>
