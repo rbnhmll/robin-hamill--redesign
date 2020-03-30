@@ -3,7 +3,7 @@
     <div class="wrapper">
       <navigation />
       <div class="footer__bottom">
-        <p>&copy; robin hamill {{ year }}</p>
+        <p>&copy; Robin Hamill {{ year }}</p>
         <social-icons />
       </div>
     </div>
@@ -40,7 +40,6 @@ footer
   display flex
   align-items center
   justify-content space-between
-  font-size 1.4rem
   color $darkgrey
   padding-bottom 2rem
 </style>
