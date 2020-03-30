@@ -3,9 +3,9 @@
     <v-header>
       <header-hero/>
     </v-header>
-    <featured-projects :projects="projects"/>
+    <!-- <featured-projects :projects="projects"/> -->
     <methodology/>
-    <current-projects/>
+    <!-- <current-projects/> -->
     <cta-banner/>
   </div>
 </template>
