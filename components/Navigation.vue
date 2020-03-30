@@ -31,13 +31,13 @@ export default {
           url: '/'
         },
         {
-          name: 'Projects',
+          name: 'Featured Projects',
           url: '/projects'
         },
-        {
-          name: 'Personal Projects',
-          url: '/personal'
-        },
+        // {
+        //   name: 'Personal Projects',
+        //   url: '/personal'
+        // },
         {
           name: 'About',
           url: '/about'
