@@ -3,8 +3,8 @@
     <h2 class="h1">Let's work together!</h2>
     <p>Get in touch with me if you would like to kickstart your next web-app or e-commerce store, brain-storm your big idea, or play Codenames. I like to drink coffee.</p>
     <SocialIcons 
-      icon-colour="#fff" 
-      border-colour="#fff"/>
+      icon-colour="#045686" 
+      border-colour="#045686"/>
   </section>
 </template>
 
@@ -24,10 +24,9 @@ export default {
 @import '~assets/styles/_mixins'
 
 .header-contact
-  color $white
   text-align center
-  padding-bottom 18rem
+  padding-bottom 15rem
 
   .h1
-    color $white
+    // margin-top 0
 </style>
