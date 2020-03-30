@@ -1,7 +1,11 @@
 <template>
   <div>
     <Vheader/>
+    <div class="wrapper">
+      <h2>Featured Projects</h2>
+    </div>
     <project-loop :projects="projects"/>
+    <cta-banner/>
   </div>
 </template>
 
@@ -10,12 +14,14 @@ import client from '~/plugins/contentful'
 
 import Vheader from '~/components/VHeader.vue'
 import ProjectLoop from '~/components/ProjectLoop.vue'
+import CtaBanner from '~/components/CtaBanner'
 
 export default {
   name: 'ProjectsIndex',
   components: {
     Vheader,
-    ProjectLoop
+    ProjectLoop,
+    CtaBanner
   },
   asyncData() {
     return client
