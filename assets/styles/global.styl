@@ -9,7 +9,6 @@ body
   font-family $mainfont
   font-weight 400
   font-size 1.6rem
-  min-height 100vh
   color $black
 
 .wrapper
@@ -27,8 +26,6 @@ body
 
 p
   font-family $secondaryfont
-  font-style italic
-  font-size 1.8rem
 
 a
   text-decoration none
@@ -36,7 +33,7 @@ a
 
 for n in (1..6)
   h{n},.h{n}
-    font-weight 300
+    font-weight 600
 
 h1,
 .h1
@@ -60,12 +57,19 @@ textarea
 
 // Page specific headers
 
+#__layout
+  > *
+    min-height 100vh
+    display flex
+    flex-direction column
+    justify-content space-between
+
 .index
   header
     background-image url('~assets/images/homeSectionA.svg')
     background-size cover
     background-position bottom
-    padding-bottom 25.5rem
+    padding-bottom 15rem
 
 .projects,
 .personal
