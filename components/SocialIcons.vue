@@ -4,7 +4,8 @@
       <a
         :style="{ borderColor: borderColour }"
         href="https://twitter.com/rbnhmll"
-        target="_blank"
+        target="_blank" 
+        rel="noopener noreferrer"
       >
         <svg
           :style="{ fill: iconColour }"
@@ -18,7 +19,8 @@
       <a
         :style="{ borderColor: borderColour }"
         href="https://github.com/rbnhmll"
-        target="_blank"
+        target="_blank" 
+        rel="noopener noreferrer"
       >
         <svg
           :style="{ fill: iconColour }"
@@ -31,8 +33,9 @@
     <li>
       <a
         :style="{ borderColor: borderColour }"
-        href="https://codepen.io/rbnhmll/"
-        target="_blank"
+        href="https://codepen.io/rbnhmll"
+        target="_blank" 
+        rel="noopener noreferrer"
       >
         <svg
           :style="{ fill: iconColour }"

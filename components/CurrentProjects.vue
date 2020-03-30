@@ -1,13 +1,14 @@
 <template>
   <section>
-    <h3 class="h1">Ongoing Projects</h3>
+    <h3 class="h1">Partners</h3>
     <div class="icon-row">
       <div class="wrapper">
         <ul>
           <li>
             <a 
               href="http://billigfitness.dk/" 
-              target="_blank">
+              target="_blank" 
+              rel="noopener noreferrer">
               <img 
                 src="/billigFitness.png" 
                 alt="Billig Fitness">
@@ -16,7 +17,8 @@
           <li>
             <a 
               href="https://www.wantboard.ca/" 
-              target="_blank">
+              target="_blank" 
+              rel="noopener noreferrer">
               <img 
                 src="/wantboard.png" 
                 alt="Wantboard">
@@ -25,7 +27,8 @@
           <li>
             <a 
               href="https://thecode.ca/" 
-              target="_blank">
+              target="_blank" 
+              rel="noopener noreferrer">
               <img 
                 src="/theCode.png" 
                 alt="The Code">
@@ -34,7 +37,8 @@
           <li>
             <a 
               href="https://survivalstore.dk/" 
-              target="_blank">
+              target="_blank" 
+              rel="noopener noreferrer">
               <img 
                 src="/survivalstore.png" 
                 alt="Survival Store">
@@ -61,8 +65,8 @@ section
   margin 60px 0
 
 .icon-row
-  border-top 1px solid #979797
-  border-bottom 1px solid #979797
+  border-top 1px solid $borderColour
+  border-bottom 1px solid $borderColour
 
 ul
   display flex
